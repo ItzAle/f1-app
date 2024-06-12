@@ -1,0 +1,25 @@
+/* .mobile__menu {
+  display: none;
+} */
+
+.buttons {
+  display: flex;
+  gap: 100px;
+}
+
+.mobileMenu {
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ece4e4;
+  border-radius: 15px 15px 0 0;
+  font-size: 40px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
