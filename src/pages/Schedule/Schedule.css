@@ -1,0 +1,12 @@
+.sch {
+  font-family: "F1 Bold";
+  font-size: 20px;
+  display: table;
+  border-bottom: 5px solid var(--color3);
+  padding-right: 115px;
+  padding-bottom: 2px;
+}
+
+.div_sch {
+  padding: 25px 0 0 15px;
+}

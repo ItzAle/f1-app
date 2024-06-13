@@ -12,22 +12,22 @@ import "./Cards.css";
 function Cards() {
   return (
     <div className="parent">
-      <Link>
+      <Link to={"/driverstandings"}>
         <img src={DS} alt="" />
       </Link>
-      <Link>
+      <Link to={"/constructorstandings"}>
         <img src={CS} alt="" />
       </Link>
-      <Link>
+      <Link to={"/raceresults"}>
         <img src={RS} alt="" />
       </Link>
-      <Link>
+      <Link to={"/schedule"}>
         <img src={Schedule} alt="" />
       </Link>
-      <Link>
+      <Link to={"/driversnteams"}>
         <img src={Results} alt="" />
       </Link>
-      <Link>
+      <Link to={"/archive"}>
         <img src={Archive} alt="" />
       </Link>
     </div>

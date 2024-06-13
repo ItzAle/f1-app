@@ -76,3 +76,115 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "F1 Bold";
+  src: local(Formula1-Bold),
+    url("../assets/fonts/Formula1-Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "F1 Regular";
+  src: local(Formula1-Regular),
+    url("../assets/fonts/Formula1-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "F1 Wide";
+  src: local(Formula1-Wide),
+    url("../assets/fonts/Formula1-Wide.otf") format("truetype");
+}
+
+/* variables  */
+
+:root {
+  --f1b: "F1 Bold";
+  --f1r: "F1 Regular";
+  --f1w: "F1 Wide";
+}
+/* Colores  */
+
+/* Aston martin */
+:root {
+  --am1: #229971;
+  --am2: #00594f;
+  --am3: #00352f;
+  --am4: #cedc00;
+}
+
+/* Redbull */
+:root {
+  --rb1: #3671c6;
+  --rb2: #1221f4;
+  --rb3: #223971;
+  --rb4: #cc1e4a;
+  --rb5: #ffc906;
+}
+
+/* Ferrari */
+
+:root {
+  --fr1: #e8002d;
+  --fr2: #a6051a;
+  --fr3: #ffeb00;
+}
+
+/* Mclaren */
+
+:root {
+  --mc1: #ff8000;
+  --mc2: #47c7fc;
+}
+
+/* Mercedes */
+
+:root {
+  --mcs1: #27f4d2;
+  --mcs2: #00a19c;
+  --mcs3: #c6c6c6;
+  --mcs4: #80142b;
+}
+
+/* Haas */
+
+:root {
+  --haas1: #efefef;
+  --haas2: #aeaeae;
+  --haas3: #da291c;
+  --haas4: #b6babd;
+}
+
+/* RBCASHAPP */
+
+:root {
+  --rbca1: #6692ff;
+  --rbca2: #fe3436;
+  --rbca3: #00d60b;
+}
+
+/* Kick */
+
+:root {
+  --k1: #52e252;
+}
+
+/* Williams */
+
+:root {
+  --w1: #65c4ff;
+}
+
+/* Alpine */
+
+:root {
+  --a1: #ff87bc;
+  --a2: #fd48c7;
+  --a3: #0078c1;
+  --a4: #005ba9;
+}
+
+/* Main colors */
+
+:root {
+  --color1: #c42021;
+  --color2: #dd2c2c;
+  --color3: #e56161;
+}
