@@ -24,6 +24,23 @@ function DriverStandings() {
     Danish: "DK",
   };
 
+  const teamLogo = {
+    Mercedes:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png",
+    "Red Bull": "https://upload.wikimedia.org/wikipedia/tr/4/42/Redbull.png",
+    Ferrari:
+      "https://i.pinimg.com/originals/4c/ab/f1/4cabf11ca2754891d4d9d20326eca835.png",
+    "Aston Martin":
+      "https://cdn.icon-icons.com/icons2/2402/PNG/512/aston_martin_logo_icon_145844.png",
+    "Alpine F1 Team":
+      "https://i.pinimg.com/736x/9e/21/ae/9e21ae5fbc8193811439951e8e170516.jpg",
+    "RB F1 Team": "https://i.ibb.co/9qHqKXq/RBCA.png",
+    Sauber: "https://i.ibb.co/4T4Yy80/Kick.png",
+    McLaren: "https://i.ibb.co/HNXc4Sz/Mclaren.png",
+    "Haas F1 Team": "https://i.ibb.co/pbvptB1/Haas.png",
+    Williams: "https://i.ibb.co/PmzmNzk/Williams.png",
+  };
+
   useEffect(() => {
     driversService
       .getAll()
@@ -41,19 +58,32 @@ function DriverStandings() {
     <div>
       <div className="div_ds">
         <h1 className="DS">Driver Standings</h1>
-        {drivers.map((driver) => (
-          <div key={driver.Driver.driverId}>
-            <ul>
-              <li>
-                {driver.position}.{driver.Driver.familyName} {driver.points}
-                {driver.Constructors[0].name}{" "}
-                <Flag
-                  code={nationalityToCountryCode[driver.Driver.nationality]}
-                />
-              </li>
-            </ul>
-          </div>
-        ))}
+        <div className="standings">
+          {drivers.map((driver) => (
+            <div className="driver_div" key={driver.Driver.driverId}>
+              <ul className="ul">
+                <li className="li">
+                  {driver.position}.{" "}
+                  <Flag
+                    className="flag"
+                    code={nationalityToCountryCode[driver.Driver.nationality]}
+                  />{" "}
+                  {driver.Driver.familyName}
+                  {teamLogo[driver.Constructors[0].name] ? (
+                    <img
+                      src={teamLogo[driver.Constructors[0].name]}
+                      alt={driver.Constructors[0].name}
+                      style={{ height: "20px", marginLeft: "10px" }}
+                    />
+                  ) : (
+                    driver.Constructors[0].name
+                  )}
+                  {driver.points}PTS{" "}
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

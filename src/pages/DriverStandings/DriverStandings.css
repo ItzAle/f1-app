@@ -9,4 +9,24 @@
 
 .div_ds {
   padding: 25px 0 0 15px;
+  font-family: var(--f1r);
+  justify-self: baseline;
+}
+
+.li {
+  display: flex;
+  gap: 20px;
+}
+.driver_div {
+  list-style: none;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+}
+
+.standings {
+  text-align: center;
+  padding-top: 20px;
 }
