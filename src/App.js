@@ -7,8 +7,6 @@ import "./assets/fonts/Formula1-Bold.otf";
 import "./assets/fonts/Formula1-Regular.otf";
 import "./assets/fonts/Formula1-Wide.otf";
 import DriverStandings from "./pages/DriverStandings/DriverStandings";
-import NavBar from "./components/NavBar/NavBar";
-import MobileMenu from "./components/MobileMenu/MobileMenu";
 import ConstructorStandings from "./pages/ConstructorStandings/ConstructorStandings";
 import RaceResults from "./pages/RaceResults/RaceResults";
 import Schedule from "./pages/Schedule/Schedule";
@@ -16,7 +14,6 @@ import Schedule from "./pages/Schedule/Schedule";
 function App() {
   return (
     <div>
-      <NavBar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/driverstandings" element={<DriverStandings />} />
@@ -27,7 +24,6 @@ function App() {
         <Route path="/raceresults" element={<RaceResults />} />
         <Route path="/schedule" element={<Schedule />} />
       </Routes>
-      <MobileMenu />
     </div>
   );
 }

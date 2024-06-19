@@ -3,6 +3,7 @@ import "./DriverStandings.css";
 import "../../assets/global.css";
 import driversService from "./../../apiServices/testapi";
 import Flag from "react-world-flags";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
@@ -22,6 +23,8 @@ function DriverStandings() {
     Australian: "AU",
     Chinese: "CN",
     Danish: "DK",
+    Finnish: "FIN",
+    American: "USA",
   };
 
   const teamLogo = {
@@ -39,6 +42,10 @@ function DriverStandings() {
     McLaren: "https://i.ibb.co/HNXc4Sz/Mclaren.png",
     "Haas F1 Team": "https://i.ibb.co/pbvptB1/Haas.png",
     Williams: "https://i.ibb.co/PmzmNzk/Williams.png",
+  };
+
+  const driverImages = {
+    VER: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png",
   };
 
   useEffect(() => {
@@ -61,30 +68,28 @@ function DriverStandings() {
         <div className="standings">
           {drivers.map((driver) => (
             <div className="driver_div" key={driver.Driver.driverId}>
-              <ul className="ul">
-                <li className="li">
-                  {driver.position}.{" "}
-                  <Flag
-                    className="flag"
-                    code={nationalityToCountryCode[driver.Driver.nationality]}
-                  />{" "}
-                  {driver.Driver.familyName}
-                  {teamLogo[driver.Constructors[0].name] ? (
-                    <img
-                      src={teamLogo[driver.Constructors[0].name]}
-                      alt={driver.Constructors[0].name}
-                      style={{ height: "20px", marginLeft: "10px" }}
-                    />
-                  ) : (
-                    driver.Constructors[0].name
-                  )}
-                  {driver.points}PTS{" "}
-                </li>
-              </ul>
+              <p className="position">{driver.position}</p>
+              <Flag
+                className="flag"
+                code={nationalityToCountryCode[driver.Driver.nationality]}
+              />
+              <p>{driver.Driver.familyName}</p>
+              <div className="team-logo">
+                {teamLogo[driver.Constructors[0].name] ? (
+                  <img
+                    src={teamLogo[driver.Constructors[0].name]}
+                    alt={driver.Constructors[0].name}
+                  />
+                ) : (
+                  driver.Constructors[0].name
+                )}
+              </div>
+              <p>{driver.points}PTS</p>
             </div>
           ))}
         </div>
       </div>
+      <MobileMenu/>
     </div>
   );
 }

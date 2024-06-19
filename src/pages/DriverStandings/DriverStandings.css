@@ -1,32 +1,55 @@
 .DS {
   font-family: "F1 Bold";
   font-size: 20px;
-  display: table;
   border-bottom: 5px solid var(--color3);
-  padding-right: 115px;
   padding-bottom: 2px;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .div_ds {
-  padding: 25px 0 0 15px;
   font-family: var(--f1r);
-  justify-self: baseline;
-}
-
-.li {
-  display: flex;
-  gap: 20px;
-}
-.driver_div {
-  list-style: none;
-}
-
-.flag {
-  width: 20px;
-  height: 20px;
 }
 
 .standings {
-  text-align: center;
   padding-top: 20px;
+}
+
+.driver_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 6px 10px 5px;
+  font-size: 22px;
+  border-bottom: 1px solid #ccc;
+}
+
+.driver_info {
+  display: flex;
+  align-items: center;
+}
+
+/* .driver_div p {
+  margin: 0 10px;
+} */
+
+.position {
+  width: 50px;
+  text-align: left;
+}
+
+.flag {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.team-logo img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.points {
+  width: 80px;
+  text-align: right;
 }
