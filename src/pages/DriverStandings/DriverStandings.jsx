@@ -44,8 +44,21 @@ function DriverStandings() {
     Williams: "https://i.ibb.co/PmzmNzk/Williams.png",
   };
 
-  const driverImages = {
-    VER: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png",
+  // const driverImages = {
+  //   VER: "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png",
+  // };
+
+  const teamColorClass = {
+    Mercedes: "mercedes",
+    "Red Bull": "redbull",
+    Ferrari: "ferrari",
+    "Aston Martin": "astonmartin",
+    "Alpine F1 Team": "alpine",
+    "RB F1 Team": "rb",
+    Sauber: "sauber",
+    McLaren: "mclaren",
+    "Haas F1 Team": "haas",
+    Williams: "williams",
   };
 
   useEffect(() => {
@@ -68,12 +81,19 @@ function DriverStandings() {
         <div className="standings">
           {drivers.map((driver) => (
             <div className="driver_div" key={driver.Driver.driverId}>
+              <span
+                className={`team-color ${
+                  teamColorClass[driver.Constructors[0].name]
+                }`}
+              >
+                .
+              </span>
               <p className="position">{driver.position}</p>
               <Flag
                 className="flag"
                 code={nationalityToCountryCode[driver.Driver.nationality]}
               />
-              <p>{driver.Driver.familyName}</p>
+              <p className="driver">{driver.Driver.familyName}</p>
               <div className="team-logo">
                 {teamLogo[driver.Constructors[0].name] ? (
                   <img
@@ -84,12 +104,11 @@ function DriverStandings() {
                   driver.Constructors[0].name
                 )}
               </div>
-              <p>{driver.points}PTS</p>
+              <p className="points">{driver.points}PTS</p>
             </div>
           ))}
         </div>
       </div>
-      <MobileMenu/>
     </div>
   );
 }
