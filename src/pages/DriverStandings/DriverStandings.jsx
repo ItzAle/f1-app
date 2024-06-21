@@ -8,6 +8,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import nationalityToCountryCode from "../../components/other/images";
 import teamLogo from "../../components/other/teamLogo";
 import teamColorClass from "../../components/other/teamColorClass";
+import { Link } from "react-router-dom";
 
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
@@ -41,33 +42,35 @@ function DriverStandings() {
           <div className="DS">{<NavBar />}Driver Standings</div>
           <div className="standings">
             {drivers.map((driver) => (
-              <div className="driver_div" key={driver.Driver.driverId}>
-                <span
-                  className={`team-color ${
-                    teamColorClass[driver.Constructors[0].name]
-                  }`}
-                >
-                  .
-                </span>
-                <p className="position">{driver.position}</p>
-                <Flag
-                  className="flag"
-                  code={nationalityToCountryCode[driver.Driver.nationality]}
-                />
-                <p className="driver">{driver.Driver.familyName}</p>
-                <div className="team-logo-div">
-                  {teamLogo[driver.Constructors[0].name] ? (
-                    <img
-                      className="team-logo"
-                      src={teamLogo[driver.Constructors[0].name]}
-                      alt={driver.Constructors[0].name}
-                    />
-                  ) : (
-                    driver.Constructors[0].name
-                  )}
+              <Link to={`/driver/${drivers.id}`}>
+                <div className="driver_div" key={driver.Driver.driverId}>
+                  <span
+                    className={`team-color ${
+                      teamColorClass[driver.Constructors[0].name]
+                    }`}
+                  >
+                    .
+                  </span>
+                  <p className="position">{driver.position}</p>
+                  <Flag
+                    className="flag"
+                    code={nationalityToCountryCode[driver.Driver.nationality]}
+                  />
+                  <p className="driver">{driver.Driver.familyName}</p>
+                  <div className="team-logo-div">
+                    {teamLogo[driver.Constructors[0].name] ? (
+                      <img
+                        className="team-logo"
+                        src={teamLogo[driver.Constructors[0].name]}
+                        alt={driver.Constructors[0].name}
+                      />
+                    ) : (
+                      driver.Constructors[0].name
+                    )}
+                  </div>
+                  <p className="points">{driver.points}PTS</p>
                 </div>
-                <p className="points">{driver.points}PTS</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
