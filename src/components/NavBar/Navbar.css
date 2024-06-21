@@ -122,6 +122,9 @@
   .navbar_desk {
     display: none !important;
   }
+  .no-scroll {
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 769px) {

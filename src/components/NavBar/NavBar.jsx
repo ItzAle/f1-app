@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "./../../assets/images/f1logo.png";
@@ -6,6 +6,13 @@ import logo from "./../../assets/images/f1logo.png";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isOpen]);
   return (
     <div>
       <nav className="navbar_desk">
