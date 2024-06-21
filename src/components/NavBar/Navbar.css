@@ -11,13 +11,6 @@
   width: 100%;
   height: 30px;
 }
-.nav_logo {
-  font-family: var(--font1);
-  font-weight: bold;
-  margin: 15px;
-  font-size: 30px;
-  color: var(--color1);
-}
 .navbar_desk {
   display: flex;
   justify-content: space-between;
@@ -60,20 +53,6 @@
   font-size: 20px;
   transition: all 0.4s ease-in-out;
   font-weight: bold;
-}
-
-.media {
-  font-family: var(--font1);
-  padding: 50px;
-  background-color: var(--color1);
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  text-decoration: none;
-  font-size: 27px;
-  transition: all 0.4s ease-in-out;
 }
 
 @media (max-width: 768px) {
