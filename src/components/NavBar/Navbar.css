@@ -7,7 +7,7 @@
   width: 100%;
   align-items: center;
 }
-.logomobile {
+.logo_toggle {
   display: none;
 }
 .logo {
@@ -120,6 +120,7 @@
   }
   .logo_toggle {
     transition: all 0.5 ease;
+    display: block;
     width: 100px;
     height: 100%;
   }
