@@ -28,20 +28,16 @@ function DriverStandings() {
   };
 
   const teamLogo = {
-    Mercedes:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/2048px-Mercedes-Logo.svg.png",
-    "Red Bull": "https://upload.wikimedia.org/wikipedia/tr/4/42/Redbull.png",
-    Ferrari:
-      "https://i.pinimg.com/originals/4c/ab/f1/4cabf11ca2754891d4d9d20326eca835.png",
-    "Aston Martin":
-      "https://cdn.icon-icons.com/icons2/2402/PNG/512/aston_martin_logo_icon_145844.png",
-    "Alpine F1 Team":
-      "https://i.pinimg.com/736x/9e/21/ae/9e21ae5fbc8193811439951e8e170516.jpg",
-    "RB F1 Team": "https://i.ibb.co/9qHqKXq/RBCA.png",
-    Sauber: "https://i.ibb.co/4T4Yy80/Kick.png",
-    McLaren: "https://i.ibb.co/HNXc4Sz/Mclaren.png",
-    "Haas F1 Team": "https://i.ibb.co/pbvptB1/Haas.png",
-    Williams: "https://i.ibb.co/PmzmNzk/Williams.png",
+    Mercedes: "https://i.ibb.co/6Ng9CYg/Mercedes.png",
+    "Red Bull": "https://i.ibb.co/xSxMjL0/RedBull.png",
+    Ferrari: "https://i.ibb.co/vxqXDv1/Ferrari.png",
+    "Aston Martin": "https://i.ibb.co/JcYs0fx/Astonmartin.png",
+    "Alpine F1 Team": "https://i.ibb.co/zVtK673/Alpine.png",
+    "RB F1 Team": "https://i.ibb.co/R9RSjXY/RCBA.png",
+    Sauber: "https://i.ibb.co/m5XVJVG/sauber.png",
+    McLaren: "https://i.ibb.co/QCZdDCw/McLaren.png",
+    "Haas F1 Team": "https://i.ibb.co/JR9LGXQ/Haas.png",
+    Williams: "https://i.ibb.co/W2HWGmz/Williams.png",
   };
 
   // const driverImages = {
@@ -85,18 +81,17 @@ function DriverStandings() {
                 className={`team-color ${
                   teamColorClass[driver.Constructors[0].name]
                 }`}
-              >
-                .
-              </span>
+              >.</span>
               <p className="position">{driver.position}</p>
               <Flag
                 className="flag"
                 code={nationalityToCountryCode[driver.Driver.nationality]}
               />
               <p className="driver">{driver.Driver.familyName}</p>
-              <div className="team-logo">
+              <div className="team-logo-div">
                 {teamLogo[driver.Constructors[0].name] ? (
                   <img
+                    className="team-logo"
                     src={teamLogo[driver.Constructors[0].name]}
                     alt={driver.Constructors[0].name}
                   />

@@ -3,8 +3,6 @@
   font-size: 20px;
   border-bottom: 5px solid var(--color3);
   padding-bottom: 2px;
-  padding-top: 10px;
-  padding-left: 10px;
   text-align: center;
 }
 
@@ -18,79 +16,57 @@
 
 .driver_div {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 1rem;
-  font-size: 22px;
+  align-items: center;
+  padding: 10px;
   border-bottom: 1px solid #ccc;
-  gap: 10px;
-  align-items: center;
-}
-.points {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-}
-.driver_info {
-  display: flex;
-  align-items: center;
 }
 
-/* .driver_div p {
-  margin: 0 10px;
-} */
-
-.flag {
-  width: 30px;
-  height: 30px;
-}
-.team-logo img {
-  height: 100%;
-  width: 25px;
+.position,
+.flag,
+.driver,
+.team-logo-div {
+  flex: 0 0 auto; 
 }
 
-.team-logo {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-}
-
-.points {
-  width: 80px;
-  text-align: right;
+.driver_div p {
+  margin: 0 10px; 
 }
 
 .position {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
+  width: 50px;
+  text-align: left; 
 }
+
 .flag {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
+  width: 30px;
+  height: 20px; 
+  object-fit: cover; 
+  margin-right: 10px; 
+}
+
+.team-logo {
+  width: 30px; 
+  height: 100%; 
+  object-fit: cover;
+}
+
+.team-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  margin-left: 10px;
 }
 
 .driver {
-  display: block;
   flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  text-align: left;
+  text-align: left; 
+}
+
+.points {
+  width: 80px; 
+  text-align: right; 
+  margin-left: auto; 
 }
 
 /* ======================================== */
