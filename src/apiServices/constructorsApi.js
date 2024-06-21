@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const teamsApi = "http://ergast.com/api/f1/current/constructorStandings.json";
+const teamsApi = "https://ergast.com/api/f1/current/constructorStandings.json";
 
 const teamsService = {
   getAll() {

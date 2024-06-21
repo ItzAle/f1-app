@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const driversApi = "http://ergast.com/api/f1/current/driverstandings.json";
+const driversApi = "https://ergast.com/api/f1/current/driverstandings.json";
 
 const driversService = {
   getAll() {
