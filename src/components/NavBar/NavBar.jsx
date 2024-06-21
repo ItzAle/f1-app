@@ -48,9 +48,15 @@ function NavBar() {
           <span></span>
           <span></span>
         </div>
-        <Link to={"/"}>
-          <img className="logomobile" src={logo} alt={logo}></img>
-        </Link>
+        <div className="logo-container">
+          <Link to={"/"}>
+            <img
+              className={`logo_toggle ${isOpen && "open"}`}
+              src={logo}
+              alt={logo}
+            ></img>
+          </Link>
+        </div>
       </div>
     </div>
   );
