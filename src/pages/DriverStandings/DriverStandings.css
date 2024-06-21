@@ -2,8 +2,9 @@
   font-family: "F1 Bold";
   font-size: 20px;
   border-bottom: 5px solid var(--color3);
-  padding-bottom: 2px;
-  text-align: center;
+  align-items: center;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .div_ds {
@@ -25,28 +26,28 @@
 .flag,
 .driver,
 .team-logo-div {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
 }
 
 .driver_div p {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .position {
   width: 50px;
-  text-align: left; 
+  text-align: left;
 }
 
 .flag {
   width: 30px;
-  height: 20px; 
-  object-fit: cover; 
-  margin-right: 10px; 
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .team-logo {
-  width: 30px; 
-  height: 100%; 
+  width: 30px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -60,13 +61,13 @@
 
 .driver {
   flex-grow: 1;
-  text-align: left; 
+  text-align: left;
 }
 
 .points {
-  width: 80px; 
-  text-align: right; 
-  margin-left: auto; 
+  width: 80px;
+  text-align: right;
+  margin-left: auto;
 }
 
 /* ======================================== */

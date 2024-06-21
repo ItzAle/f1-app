@@ -1,8 +1,29 @@
 .parent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   gap: 5px;
+}
+
+@media (min-width: 769px) {
+  .parent {
+    display: flex;
+    justify-content: space-around;
+  }
+  .ds {
+    transition: all 0.5s ease;
+  }
+  .ds:hover {
+    transition: all 0.5s ease;
+    opacity: 50%;
+  }
+  .cs:hover {
+    transition: all 0.5s ease;
+    opacity: 50%;
+  }
+  .cs {
+    transition: all 0.5s ease;
+  }
 }

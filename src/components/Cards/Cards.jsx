@@ -13,12 +13,12 @@ function Cards() {
   return (
     <div className="parent">
       <Link to={"/driverstandings"}>
-        <img src={DS} alt="" />
+        <img className="ds" src={DS} alt="" />
       </Link>
       <Link to={"/constructorstandings"}>
-        <img src={CS} alt="" />
+        <img className="cs" src={CS} alt="" />
       </Link>
-      <Link to={"/raceresults"}>
+      {/* <Link to={"/raceresults"}>
         <img src={RS} alt="" />
       </Link>
       <Link to={"/schedule"}>
@@ -29,7 +29,7 @@ function Cards() {
       </Link>
       <Link to={"/archive"}>
         <img src={Archive} alt="" />
-      </Link>
+      </Link> */}
     </div>
   );
 }

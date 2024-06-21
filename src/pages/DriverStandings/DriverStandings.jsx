@@ -3,10 +3,17 @@ import "./DriverStandings.css";
 import "../../assets/global.css";
 import driversService from "./../../apiServices/testapi";
 import Flag from "react-world-flags";
-import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import { Vortex } from "react-loader-spinner";
+import Loader from "../../components/Loader/Loader";
+import NavBar from "../../components/NavBar/NavBar";
 
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  function LoadingFalse() {
+    setIsLoading(false);
+  }
 
   const nationalityToCountryCode = {
     Dutch: "NL",
@@ -64,6 +71,7 @@ function DriverStandings() {
         const driversList =
           data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
         setDrivers(driversList);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching driver standings:", error);
@@ -72,38 +80,44 @@ function DriverStandings() {
 
   return (
     <div>
-      <div className="div_ds">
-        <h1 className="DS">Driver Standings</h1>
-        <div className="standings">
-          {drivers.map((driver) => (
-            <div className="driver_div" key={driver.Driver.driverId}>
-              <span
-                className={`team-color ${
-                  teamColorClass[driver.Constructors[0].name]
-                }`}
-              >.</span>
-              <p className="position">{driver.position}</p>
-              <Flag
-                className="flag"
-                code={nationalityToCountryCode[driver.Driver.nationality]}
-              />
-              <p className="driver">{driver.Driver.familyName}</p>
-              <div className="team-logo-div">
-                {teamLogo[driver.Constructors[0].name] ? (
-                  <img
-                    className="team-logo"
-                    src={teamLogo[driver.Constructors[0].name]}
-                    alt={driver.Constructors[0].name}
-                  />
-                ) : (
-                  driver.Constructors[0].name
-                )}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className="div_ds">
+          <div className="DS">{<NavBar />}Driver Standings</div>
+          <div className="standings">
+            {drivers.map((driver) => (
+              <div className="driver_div" key={driver.Driver.driverId}>
+                <span
+                  className={`team-color ${
+                    teamColorClass[driver.Constructors[0].name]
+                  }`}
+                >
+                  .
+                </span>
+                <p className="position">{driver.position}</p>
+                <Flag
+                  className="flag"
+                  code={nationalityToCountryCode[driver.Driver.nationality]}
+                />
+                <p className="driver">{driver.Driver.familyName}</p>
+                <div className="team-logo-div">
+                  {teamLogo[driver.Constructors[0].name] ? (
+                    <img
+                      className="team-logo"
+                      src={teamLogo[driver.Constructors[0].name]}
+                      alt={driver.Constructors[0].name}
+                    />
+                  ) : (
+                    driver.Constructors[0].name
+                  )}
+                </div>
+                <p className="points">{driver.points}PTS</p>
               </div>
-              <p className="points">{driver.points}PTS</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

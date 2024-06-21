@@ -1,12 +1,137 @@
-.cs {
+.CS {
   font-family: "F1 Bold";
   font-size: 20px;
-  display: table;
   border-bottom: 5px solid var(--color3);
-  padding-right: 75px;
-  padding-bottom: 2px;
+  align-items: center;
+  text-align: left;
+  padding-left: 10px;
 }
 
-.div_cs {
-  padding: 25px 0 0 15px;
+.div_ds {
+  font-family: var(--f1r);
 }
+
+.standings {
+  padding-top: 20px;
+}
+
+.driver_div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.position,
+.flag,
+.team,
+.team-logo-div {
+  flex: 0 0 auto;
+}
+
+.driver_div p {
+  margin: 0 10px;
+}
+
+.position {
+  width: 50px;
+  text-align: left;
+}
+
+.flag {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.team-logo {
+  width: 30px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.team {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.points {
+  width: 80px;
+  text-align: right;
+  margin-left: auto;
+}
+
+/* ======================================== */
+/* franja de colores */
+.team-color {
+  width: 10px;
+  height: 100%;
+  display: inline-block;
+  background-color: currentColor;
+  display: block;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.mercedes {
+  color: var(--mcs1);
+  padding: 0 0 10px 0;
+}
+
+.redbull {
+  color: var(--rb1);
+  padding: 0 0 10px 0;
+}
+
+.ferrari {
+  color: var(--fr1);
+  padding: 0 0 10px 0;
+}
+
+.astonmartin {
+  color: var(--am1);
+  padding: 0 0 10px 0;
+}
+
+.alpine {
+  color: var(--a4);
+  padding: 0 0 10px 0;
+}
+
+.rb {
+  color: var(--rbca1);
+  padding: 0 0 10px 0;
+}
+
+.sauber {
+  color: var(--k1);
+  padding: 0 0 10px 0;
+}
+
+.mclaren {
+  color: var(--mc1);
+  padding: 0 0 10px 0;
+}
+
+.haas {
+  color: var(--haas4);
+  padding: 0 0 10px 0;
+}
+
+.williams {
+  color: var(--w1);
+  padding: 0 0 10px 0;
+}
+
+/* ======================================== */
