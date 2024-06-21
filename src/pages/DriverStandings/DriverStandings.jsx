@@ -6,6 +6,7 @@ import Flag from "react-world-flags";
 import { Vortex } from "react-loader-spinner";
 import Loader from "../../components/Loader/Loader";
 import NavBar from "../../components/NavBar/NavBar";
+import { Helmet } from "react-helmet";
 
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
@@ -72,6 +73,7 @@ function DriverStandings() {
           data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
         setDrivers(driversList);
         setIsLoading(false);
+        document.title = "Driver Standings";
       })
       .catch((error) => {
         console.error("Error fetching driver standings:", error);

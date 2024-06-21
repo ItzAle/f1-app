@@ -13,6 +13,7 @@ function LandingPage() {
 
   useEffect(() => {
     setIsLoading(false);
+    document.title = "Home";
   });
 
   return (

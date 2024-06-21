@@ -70,6 +70,7 @@ function DriverStandings() {
           data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
         setDrivers(teamsList);
         setIsLoading(false);
+        document.title = "Constructor Standings";
       })
       .catch((error) => {
         console.error("Error fetching driver standings:", error);

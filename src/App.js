@@ -23,6 +23,7 @@ function App() {
         />
         <Route path="/raceresults" element={<RaceResults />} />
         <Route path="/schedule" element={<Schedule />} />
+        <Route path="*" element={<LandingPage />} />
       </Routes>
     </div>
   );

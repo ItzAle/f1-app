@@ -23,13 +23,13 @@ function NavBar() {
       </nav>
       <div className={`nav_items ${isOpen && "open"}`}>
         <Link to={"/"}>
-          <h1>Home</h1>
+          <h1 className="home_mobile">Home</h1>
         </Link>
         <Link to={"/driverstandings"}>
-          <h1>Driver Standings</h1>
+          <h1 className="ds_mobile">Driver Standings</h1>
         </Link>
         <Link to={"/constructorstandings"}>
-          <h1>Constructor Standings</h1>
+          <h1 className="cs_mobile">Constructor Standings</h1>
         </Link>
       </div>
       <div
