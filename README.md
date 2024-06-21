@@ -1,4 +1,4 @@
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)]()
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/ItzAle/f1-app/blob/main/README-es.md)
 
 # F1 App made with React
 # You can check the web [here](https://f1-app-sigma.vercel.app).
