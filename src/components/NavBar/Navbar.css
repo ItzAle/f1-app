@@ -44,7 +44,7 @@
 .nav_items a {
   font-family: "F1 Bold";
   padding: 30px;
-  color: var(--color1);
+  color: black;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
@@ -73,6 +73,7 @@
   }
   .nav_items.open {
     transform: translateX(0) !important;
+    transition: all 0.5 ease;
   }
   .nav_toggle {
     display: flex !important;
@@ -91,18 +92,33 @@
   }
   .nav_toggle.open > span {
     transform: rotate(45deg) translate(0px, 0px);
+    transition: all 0.5 ease;
   }
   .nav_toggle.open > span:nth-child(2) {
     display: none;
+    transition: all 0.5 ease;
   }
   .nav_toggle.open > span:nth-child(3) {
     transform: rotate(-45deg) translate(-5px, 1px);
+    transition: all 0.5 ease;
   }
   .navbar_desk {
     display: none !important;
+    transition: all 0.5 ease;
   }
   .no-scroll {
     overflow: hidden;
+  }
+  .logomobile {
+    width: 100px;
+    height: 100%;
+  }
+  .mobileDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 20px 10px;
+    flex-direction: row-reverse;
   }
 }
 

@@ -39,13 +39,18 @@ function NavBar() {
           <h1 className="cs_mobile">Constructor Standings</h1>
         </Link>
       </div>
-      <div
-        className={`nav_toggle ${isOpen && "open"}`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="mobileDiv">
+        <div
+          className={`nav_toggle ${isOpen && "open"}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <Link to={"/"}>
+          <img className="logomobile" src={logo} alt={logo}></img>
+        </Link>
       </div>
     </div>
   );
