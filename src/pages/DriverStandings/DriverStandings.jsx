@@ -42,35 +42,33 @@ function DriverStandings() {
           <div className="DS">{<NavBar />}Driver Standings</div>
           <div className="standings">
             {drivers.map((driver) => (
-              <Link to={`/driver/${drivers.id}`}>
-                <div className="driver_div" key={driver.Driver.driverId}>
-                  <span
-                    className={`team-color ${
-                      teamColorClass[driver.Constructors[0].name]
-                    }`}
-                  >
-                    .
-                  </span>
-                  <p className="position">{driver.position}</p>
-                  <Flag
-                    className="flag"
-                    code={nationalityToCountryCode[driver.Driver.nationality]}
-                  />
-                  <p className="driver">{driver.Driver.familyName}</p>
-                  <div className="team-logo-div">
-                    {teamLogo[driver.Constructors[0].name] ? (
-                      <img
-                        className="team-logo"
-                        src={teamLogo[driver.Constructors[0].name]}
-                        alt={driver.Constructors[0].name}
-                      />
-                    ) : (
-                      driver.Constructors[0].name
-                    )}
-                  </div>
-                  <p className="points">{driver.points}PTS</p>
+              <div className="driver_div" key={driver.Driver.driverId}>
+                <span
+                  className={`team-color ${
+                    teamColorClass[driver.Constructors[0].name]
+                  }`}
+                >
+                  .
+                </span>
+                <p className="position">{driver.position}</p>
+                <Flag
+                  className="flag"
+                  code={nationalityToCountryCode[driver.Driver.nationality]}
+                />
+                <p className="driver">{driver.Driver.familyName}</p>
+                <div className="team-logo-div">
+                  {teamLogo[driver.Constructors[0].name] ? (
+                    <img
+                      className="team-logo"
+                      src={teamLogo[driver.Constructors[0].name]}
+                      alt={driver.Constructors[0].name}
+                    />
+                  ) : (
+                    driver.Constructors[0].name
+                  )}
                 </div>
-              </Link>
+                <p className="points">{driver.points}PTS</p>
+              </div>
             ))}
           </div>
         </div>
