@@ -19,6 +19,7 @@ const driversImage = {
   zhou: "https://i.ibb.co/cFLK4QX/ZHO.png",
   bottas: "https://i.ibb.co/py1DKp1/BOT.png",
   sargeant: "https://i.ibb.co/Zm4xrsC/SAR.png",
+  hamilton: "https://i.ibb.co/LYRRSqh/HAM.png",
 };
 
 export default driversImage;

@@ -5,7 +5,12 @@ import Loader from "../Loader/Loader";
 import driversImage from "../../components/other/driversImage";
 import permanentNumber from "../../components/other/permamentNumber";
 import nationalityToCountryCode from "../../components/other/images";
+import teamLogo from "../../components/other/teamLogo";
+import helmets from "../../components/other/helmets";
 import Flag from "react-world-flags";
+import "../../assets/global.css";
+import "./DriverProfile.css";
+import NavBar from "../NavBar/NavBar";
 
 function DriverProfile() {
   const { id } = useParams();
@@ -67,44 +72,75 @@ function DriverProfile() {
   const age = calculateAge(driver.Driver.dateOfBirth);
 
   return (
-    <div>
-      <h1>
-        {driver.Driver.givenName} {driver.Driver.familyName}
-      </h1>
-      <p>Nationality: {driver.Driver.nationality}</p>
+    <>
+      <NavBar />
+      <div className="main_Div">
+        <div>
+          <h1>
+            {driver.Driver.givenName} {driver.Driver.familyName}
+          </h1>
+          <div>
+            {/* DRIVER IMG */}
+            {driversImage[driver.Driver.driverId] ? (
+              <img
+                className="driver-logo"
+                src={driversImage[driver.Driver.driverId]}
+                alt={driver.Driver.driverId}
+              />
+            ) : (
+              driver.Driver.driverId
+            )}
+          </div>
+          <div>
+            {/* permament number */}
+            {permanentNumber[driver.Driver.permanentNumber] ? (
+              <img
+                className="permanentNumber"
+                src={permanentNumber[driver.Driver.permanentNumber]}
+                alt={driver.Driver.permanentNumber}
+              />
+            ) : (
+              driver.Driver.permanentNumber
+            )}
+          </div>
+        </div>
+
+        <div className="team-logo-div">
+          {/* TEAM LOGO  */}
+          {teamLogo[driver.Constructors[0].name] ? (
+            <img
+              className="teamLogo"
+              src={teamLogo[driver.Constructors[0].name]}
+              alt={driver.Constructors[0].name}
+            />
+          ) : (
+            driver.Constructors[0].name
+          )}
+        </div>
+        <div>
+          {/* HELMET */}
+          {helmets[driver.Driver.driverId] ? (
+            <img
+              className="driver-logo"
+              src={helmets[driver.Driver.driverId]}
+              alt={driver.Driver.driverId}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+        <div>
+          <Flag
+            className="flag"
+            code={nationalityToCountryCode[driver.Driver.nationality]}
+          />
+        </div>
+      </div>
       <p>
         Date of Birth: {age} ({driver.Driver.dateOfBirth})
       </p>
       <p>Wins: {driver.wins}</p>
-      <div>
-        <Flag
-          className="flag"
-          code={nationalityToCountryCode[driver.Driver.nationality]}
-        />
-      </div>
-      <div>
-        {driversImage[driver.Driver.driverId] ? (
-          <img
-            className="driver-logo"
-            src={driversImage[driver.Driver.driverId]}
-            alt={driver.Driver.driverId}
-          />
-        ) : (
-          driver.Driver.driverId
-        )}
-      </div>
-      <div>
-        {permanentNumber[driver.Driver.permanentNumber] ? (
-          <img
-            className="permanentNumber"
-            src={permanentNumber[driver.Driver.permanentNumber]}
-            alt={driver.Driver.driverId}
-          />
-        ) : (
-          driver.Driver.driverId
-        )}
-      </div>
-    </div>
+    </>
   );
 }
 

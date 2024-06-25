@@ -1,0 +1,25 @@
+const helmets = {
+  max_verstappen: "https://i.ibb.co/brscG9R/VER.png",
+  norris: "https://i.ibb.co/DWKPKFS/NOR.png",
+  leclerc: "https://i.ibb.co/Fq3WGVG/LEC.png",
+  sainz: "https://i.ibb.co/Ld3HfXy/SAI.png",
+  perez: "https://i.ibb.co/WKVNPt5/PER.png",
+  piastri: "https://i.ibb.co/hdSM8hZ/PIA.png",
+  russell: "https://i.ibb.co/L5hDzd5/RUS.png",
+  alonso: "https://i.ibb.co/fpY9Jwt/ALO.png",
+  tsunoda: "https://i.ibb.co/g6FZ5fZ/TSU.png",
+  stroll: "https://i.ibb.co/qytPR3F/STR.png",
+  ricciardo: "https://i.ibb.co/RT44QRP/RIC.png",
+  bearman: "",
+  hulkenberg: "https://i.ibb.co/XFr9c4N/HUL.png",
+  gasly: "https://i.ibb.co/vQkcNKz/GAS.png",
+  ocon: "https://i.ibb.co/6Rqy2bd/OCO.png",
+  albon: "https://i.ibb.co/whH2Q50/ALB.png",
+  kevin_magnussen: "https://i.ibb.co/kDwqK9p/MAG.png",
+  zhou: "https://i.ibb.co/bWkwncf/ZHO.png",
+  bottas: "https://i.ibb.co/84gDsF8/BOT.png",
+  sargeant: "https://i.ibb.co/GWFX1kh/SAR.png",
+  hamilton: "https://i.ibb.co/NjpjYNB/HAM.png",
+};
+
+export default helmets;
