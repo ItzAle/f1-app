@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import driversService from "../../apiServices/testapi";
 import { useParams } from "react-router";
 import Loader from "../Loader/Loader";
+import driversImage from "../../components/other/driversImage";
+import permanentNumber from "../../components/other/permamentNumber";
+import nationalityToCountryCode from "../../components/other/images";
+import Flag from "react-world-flags";
 
 function DriverProfile() {
   const { id } = useParams();
@@ -12,9 +16,14 @@ function DriverProfile() {
   useEffect(() => {
     setLoading(true);
     driversService
-      .getbyId(id)
+      .getDriverStandings()
       .then((data) => {
-        const fetchedDriver = data.MRData.DriverTable.Drivers[0];
+        const standings =
+          data?.MRData?.StandingsTable?.StandingsLists?.[0]?.DriverStandings ||
+          [];
+        const fetchedDriver = standings.find(
+          (standing) => standing.Driver.driverId === id
+        );
         setDriver(fetchedDriver);
         setLoading(false);
       })
@@ -55,17 +64,46 @@ function DriverProfile() {
     return <div>No driver data available</div>;
   }
 
-  const age = calculateAge(driver.dateOfBirth);
+  const age = calculateAge(driver.Driver.dateOfBirth);
 
   return (
     <div>
       <h1>
-        {driver.givenName} {driver.familyName}
+        {driver.Driver.givenName} {driver.Driver.familyName}
       </h1>
-      <p>Nationality: {driver.nationality}</p>
+      <p>Nationality: {driver.Driver.nationality}</p>
       <p>
-        Date of Birth: {age} ({driver.dateOfBirth})
+        Date of Birth: {age} ({driver.Driver.dateOfBirth})
       </p>
+      <p>Wins: {driver.wins}</p>
+      <div>
+        <Flag
+          className="flag"
+          code={nationalityToCountryCode[driver.Driver.nationality]}
+        />
+      </div>
+      <div>
+        {driversImage[driver.Driver.driverId] ? (
+          <img
+            className="driver-logo"
+            src={driversImage[driver.Driver.driverId]}
+            alt={driver.Driver.driverId}
+          />
+        ) : (
+          driver.Driver.driverId
+        )}
+      </div>
+      <div>
+        {permanentNumber[driver.Driver.permanentNumber] ? (
+          <img
+            className="permanentNumber"
+            src={permanentNumber[driver.Driver.permanentNumber]}
+            alt={driver.Driver.driverId}
+          />
+        ) : (
+          driver.Driver.driverId
+        )}
+      </div>
     </div>
   );
 }

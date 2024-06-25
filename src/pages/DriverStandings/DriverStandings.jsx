@@ -20,7 +20,7 @@ function DriverStandings() {
 
   useEffect(() => {
     driversService
-      .getAll()
+      .getDriverStandings()
       .then((data) => {
         const driversList =
           data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
