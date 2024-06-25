@@ -10,6 +10,8 @@ import DriverStandings from "./pages/DriverStandings/DriverStandings";
 import ConstructorStandings from "./pages/ConstructorStandings/ConstructorStandings";
 import RaceResults from "./pages/RaceResults/RaceResults";
 import Schedule from "./pages/Schedule/Schedule";
+import DriverProfile from "./components/DriverProfile/DriverProfile";
+import ConstructorsProfile from "./components/ConstructorsProfile/ConstructorsProfile";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/raceresults" element={<RaceResults />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="*" element={<LandingPage />} />
+        <Route path="/driver/:id" element={<DriverProfile />} />
+        <Route path="/constructor/:id" element={<ConstructorsProfile />} />
       </Routes>
     </div>
   );

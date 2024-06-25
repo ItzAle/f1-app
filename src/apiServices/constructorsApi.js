@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const teamsApi = "https://ergast.com/api/f1/current/constructorStandings.json";
+const teamsA = "http://ergast.com/api/f1/2024/constructors";
 
 const teamsService = {
   getAll() {
@@ -10,7 +11,7 @@ const teamsService = {
   },
 
   getbyId(id) {
-    return axios.get(teamsApi + `/${id}`).then((res) => res.data);
+    return axios.get(`${teamsA}/${id}.json`).then((res) => res.data);
   },
 };
 

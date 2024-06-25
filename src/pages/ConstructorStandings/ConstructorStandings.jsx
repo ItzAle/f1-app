@@ -8,8 +8,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import nationalityToCountryCode from "../../components/other/images";
 import teamColorClass from "../../components/other/teamColorClass";
 import teamLogo from "../../components/other/teamLogo";
-
-
+import { Link } from "react-router-dom";
 
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
@@ -46,38 +45,43 @@ function DriverStandings() {
           <div className="standings">
             {drivers.map((team) => {
               return (
-                <div
-                  className="driver_div"
+                <Link
+                  to={`/constructor/${team.Constructor.constructorId}`}
                   key={team.Constructor.constructorId}
                 >
-                  <span
-                    className={`team-color ${
-                      teamColorClass[team.Constructor.name]
-                    }`}
+                  <div
+                    className="driver_div"
+                    key={team.Constructor.constructorId}
                   >
-                    .
-                  </span>
-                  <p className="position">{team.position}</p>
-                  <Flag
-                    className="flag"
-                    code={
-                      nationalityToCountryCode[team.Constructor.nationality]
-                    }
-                  />
-                  <p className="team">{team.Constructor.name}</p>
-                  <div className="team-logo-div">
-                    {teamLogo[team.Constructor.name] ? (
-                      <img
-                        className="team-logo"
-                        src={teamLogo[team.Constructor.name]}
-                        alt={team.Constructor.name}
-                      />
-                    ) : (
-                      team.Constructor.name
-                    )}
+                    <span
+                      className={`team-color ${
+                        teamColorClass[team.Constructor.name]
+                      }`}
+                    >
+                      .
+                    </span>
+                    <p className="position">{team.position}</p>
+                    <Flag
+                      className="flag"
+                      code={
+                        nationalityToCountryCode[team.Constructor.nationality]
+                      }
+                    />
+                    <p className="team">{team.Constructor.name}</p>
+                    <div className="team-logo-div">
+                      {teamLogo[team.Constructor.name] ? (
+                        <img
+                          className="team-logo"
+                          src={teamLogo[team.Constructor.name]}
+                          alt={team.Constructor.name}
+                        />
+                      ) : (
+                        team.Constructor.name
+                      )}
+                    </div>
+                    <p className="points">{team.points}PTS</p>
                   </div>
-                  <p className="points">{team.points}PTS</p>
-                </div>
+                </Link>
               );
             })}
           </div>
