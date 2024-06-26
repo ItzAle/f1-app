@@ -18,6 +18,8 @@ const permamentNumber = {
   18: "https://i.ibb.co/pKCFmb7/STR.png",
   22: "https://i.ibb.co/zfKsRDj/TSU.png",
   24: "https://i.ibb.co/n8gRQ23/ZHO.png",
+  23: "https://i.ibb.co/gwRCjQB/ALB.png",
+  31: "https://i.ibb.co/MR6YLry/ESTOCO01.png",
 };
 
 export default permamentNumber;
