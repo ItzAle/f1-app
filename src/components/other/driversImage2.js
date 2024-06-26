@@ -5,7 +5,7 @@ const driversImage2 = {
   sainz: "https://i.ibb.co/Tk6DGhL/SAIv2.png",
   perez: "https://i.ibb.co/nz4bnz6/PERv2.png",
   piastri: "https://i.ibb.co/n194c1K/PIAv2png.png",
-  russell: "https://i.ibb.co/N16kHDJ/RUS.png",
+  russell: "https://i.ibb.co/B6yLh4C/RUSv2.png",
   alonso: "https://i.ibb.co/MP5xtDs/ALOv2.png",
   tsunoda: "https://i.ibb.co/4Tfgd10/TSUv2.png",
   stroll: "https://i.ibb.co/CBgGkbn/STR.png",
@@ -23,5 +23,3 @@ const driversImage2 = {
 };
 
 export default driversImage2;
-
-
