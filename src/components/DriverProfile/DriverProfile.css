@@ -1,0 +1,43 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 10px 10px 0 10px;
+  position: relative;
+}
+
+.driver_name {
+  font-size: 27px;
+  font-family: var(--f1b);
+  text-align: center;
+}
+
+.permanentNumberDriver {
+  width: 100%;
+}
+
+.div_nameNumber {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 98px;
+  gap: 10px;
+}
+
+.driver-logoProfile {
+  width: 315px;
+  height: auto;
+  position: relative;
+  right: 95px;
+  top: 20px;
+}
+
+.permanentNumberDriver img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}

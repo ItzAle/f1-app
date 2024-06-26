@@ -1,5 +1,5 @@
 const driversImage2 = {
-  max_verstappen: "https://i.ibb.co/sWCK61x/VER.png",
+  max_verstappen: "https://i.ibb.co/fFGWPWG/VERv2.png",
   norris: "https://i.ibb.co/QFDL6LT/NORv2.png",
   leclerc: "https://i.ibb.co/nCwmV45/LECv2.png",
   sainz: "https://i.ibb.co/Tk6DGhL/SAIv2.png",
@@ -23,3 +23,5 @@ const driversImage2 = {
 };
 
 export default driversImage2;
+
+
