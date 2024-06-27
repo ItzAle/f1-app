@@ -1,6 +1,6 @@
 import "./App.css";
 import "./assets/global.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 // fonts
 import "./assets/fonts/Formula1-Bold.otf";
@@ -12,10 +12,14 @@ import RaceResults from "./pages/RaceResults/RaceResults";
 import Schedule from "./pages/Schedule/Schedule";
 import DriverProfile from "./components/DriverProfile/DriverProfile";
 import ConstructorsProfile from "./components/ConstructorsProfile/ConstructorsProfile";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import RedirectToLandingPage from "./components/RedirectToLandingPage/RedirectToLandingPage";
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/driverstandings" element={<DriverStandings />} />
@@ -25,7 +29,7 @@ function App() {
         />
         <Route path="/raceresults" element={<RaceResults />} />
         <Route path="/schedule" element={<Schedule />} />
-        <Route path="*" element={<LandingPage />} />
+        <Route path="*" element={<RedirectToLandingPage />} />
         <Route path="/driver/:id" element={<DriverProfile />} />
         <Route path="/constructor/:id" element={<ConstructorsProfile />} />
       </Routes>

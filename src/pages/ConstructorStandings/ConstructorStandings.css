@@ -15,11 +15,12 @@
   padding-top: 20px;
 }
 
-.driver_div {
+.constructor_div {
   display: flex;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  gap: 5px;
 }
 
 .position,
@@ -29,7 +30,7 @@
   flex: 0 0 auto;
 }
 
-.driver_div p {
+.constructor_div_div p {
   margin: 0 10px;
 }
 

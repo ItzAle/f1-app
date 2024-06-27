@@ -13,6 +13,11 @@ function NavBar() {
       document.body.classList.remove("no-scroll");
     }
   }, [isOpen]);
+
+  const handleClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       <nav className="navbar_desk">
@@ -29,13 +34,13 @@ function NavBar() {
         </div>
       </nav>
       <div className={`nav_items ${isOpen && "open"}`}>
-        <Link to={"/"}>
+        <Link to={"/"} onClick={handleClick}>
           <h1 className="home_mobile">Home</h1>
         </Link>
-        <Link to={"/driverstandings"}>
+        <Link to={"/driverstandings"} onClick={handleClick}>
           <h1 className="ds_mobile">Driver Standings</h1>
         </Link>
-        <Link to={"/constructorstandings"}>
+        <Link to={"/constructorstandings"} onClick={handleClick}>
           <h1 className="cs_mobile">Constructor Standings</h1>
         </Link>
       </div>

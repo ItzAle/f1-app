@@ -8,9 +8,9 @@ import nationalityToCountryCode from "../../components/other/images";
 import teamLogo from "../../components/other/teamLogo";
 import helmets from "../../components/other/helmets";
 import Flag from "react-world-flags";
+import driversBio from "../other/driversBio";
 import "../../assets/global.css";
 import "./DriverProfile.css";
-import NavBar from "../NavBar/NavBar";
 
 function DriverProfile() {
   const { id } = useParams();
@@ -63,66 +63,84 @@ function DriverProfile() {
 
   return (
     <>
-      <NavBar />
       {isLoading ? (
         <Loader />
       ) : (
         <div className="mainMainDriver">
-          <div className="mainDiv">
-            <div className="div_nameNumber">
-              <h1 className="driver_name">
-                {driver.Driver.givenName} {driver.Driver.familyName}
-              </h1>
-              {permanentNumber[driver.Driver.permanentNumber] ? (
+          <div className="desktopMainDriver">
+            <div className="mainDiv">
+              <div className="div_nameNumber">
+                <h1 className="driver_name">
+                  {driver.Driver.givenName} {driver.Driver.familyName}
+                </h1>
+                {permanentNumber[driver.Driver.permanentNumber] ? (
+                  <img
+                    className="permanentNumberDriver"
+                    src={permanentNumber[driver.Driver.permanentNumber]}
+                    alt={driver.Driver.permanentNumber}
+                  />
+                ) : (
+                  driver.Driver.permanentNumber
+                )}
+              </div>
+
+              {driversImage2[driver.Driver.driverId] && (
                 <img
-                  className="permanentNumberDriver"
-                  src={permanentNumber[driver.Driver.permanentNumber]}
-                  alt={driver.Driver.permanentNumber}
+                  className="driver-logoProfile"
+                  src={driversImage2[driver.Driver.driverId]}
+                  alt={driver.Driver.driverId}
                 />
-              ) : (
-                driver.Driver.permanentNumber
               )}
             </div>
-
-            {driversImage2[driver.Driver.driverId] && (
-              <img
-                className="driver-logoProfile"
-                src={driversImage2[driver.Driver.driverId]}
-                alt={driver.Driver.driverId}
+            <div className="others">
+              <Flag
+                className="flag2"
+                code={nationalityToCountryCode[driver.Driver.nationality]}
               />
-            )}
+              {teamLogo[driver.Constructors[0].name] && (
+                <img
+                  className="teamLogo"
+                  src={teamLogo[driver.Constructors[0].name]}
+                  alt={driver.Constructors[0].name}
+                />
+              )}
+              {helmets[driver.Driver.driverId] && (
+                <img
+                  className="helmet"
+                  src={helmets[driver.Driver.driverId]}
+                  alt={driver.Driver.driverId}
+                />
+              )}
+            </div>
           </div>
-          <div className="others">
-            <Flag
-              className="flag2"
-              code={nationalityToCountryCode[driver.Driver.nationality]}
-            />
-            {helmets[driver.Driver.driverId] && (
-              <img
-                className="helmet"
-                src={helmets[driver.Driver.driverId]}
-                alt={driver.Driver.driverId}
-              />
-            )}
-            {teamLogo[driver.Constructors[0].name] && (
-              <img
-                className="teamLogo"
-                src={teamLogo[driver.Constructors[0].name]}
-                alt={driver.Constructors[0].name}
-              />
-            )}
-          </div>
-          <div className="texts">
-            <p>
-              Date of Birth
-              {driver.Driver.dateOfBirth} ({age})
-            </p>
-            <p>Wins: {driver.wins}</p>
-            <p>Points: {driver.points}</p>
-            <p>Position: {driver.position}</p>
+          <div className="moreInfoDriver">
+            <div className="birthDriver">
+              <p className="nBirth">Date of Birth</p>
+              <p className="pBirth">
+                {driver.Driver.dateOfBirth} ({age})
+              </p>
+            </div>
+            <div className="positionDriver">
+              <p className="nPosition">Position</p>
+              <p className="pPosition">{driver.position}</p>
+            </div>
+            <div className="winsDriver">
+              <p className="nWins">Wins</p>
+              <p className="pWins">{driver.wins}</p>
+            </div>
+            <div className="pointsDriver">
+              <p className="nPoints">Points</p>
+              <p className="pPoints">{driver.points}</p>
+            </div>
           </div>
         </div>
       )}
+      <div className="driversBio">
+        <h1 className="h1Bio">Biography</h1>
+        {driversBio[driver.Driver.driverId] && (
+          <p className="driverBio">{driversBio[driver.Driver.driverId]}</p>
+        )}
+      </div>
     </>
   );
 }

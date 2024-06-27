@@ -7,7 +7,6 @@
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 10px 10px 0 10px;
   position: relative;
 }
 
@@ -33,7 +32,7 @@
   height: auto;
   position: relative;
   right: 95px;
-  top: 20px;
+  top: 31px;
 }
 
 .permanentNumberDriver img {
@@ -64,4 +63,138 @@
 .teamLogo img {
   max-width: 100%;
   max-height: 120px;
+}
+
+.mainMainDriver {
+  margin: 2.5rem 10px 0 10px;
+}
+
+.moreInfoDriver {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 25px;
+  justify-content: space-between;
+  padding: 20px 10px 0 10px;
+}
+.nPosition,
+.nWins,
+.nPoints,
+.nBirth {
+  text-decoration: underline var(--color3);
+  font-family: var(--f1b);
+  font-family: 1rem;
+}
+.pBirth,
+.pWins,
+.pPoints,
+.pPosition {
+  text-align: center;
+}
+
+.driversBio {
+  text-align: left;
+  font-size: 1rem;
+  margin: 15px 20px 0 20px;
+  padding-bottom: 30px;
+}
+
+.h1Bio {
+  padding-bottom: 10px;
+  text-decoration: underline var(--color3);
+  font-family: var(--f1b);
+}
+
+@media (min-width: 984px) {
+  .others {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4px 10px 0 10px;
+  }
+  .desktopMainDriver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .driver-logoProfile {
+    width: 375px;
+  }
+}
+.mainMainDriver {
+  margin: 2.5rem 10px 0 10px;
+}
+
+@media (min-width: 1490px) {
+  .desktopMainDriver {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-left: 25vw;
+  }
+  .others {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mainDiv {
+    max-width: 600px;
+    padding: 30px;
+  }
+  .moreInfoDriver {
+    flex-direction: column;
+    gap: 40px;
+    font-size: 30px;
+  }
+  .nPosition,
+  .nWins,
+  .nPoints,
+  .nBirth {
+    text-decoration: underline var(--color3);
+    font-family: var(--f1b);
+    font-size: 28px;
+  }
+  .pBirth,
+  .pWins,
+  .pPoints,
+  .pPosition {
+    text-align: left;
+    font-size: 28px;
+  }
+  .mainMainDriver {
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+  }
+  .driver_name {
+    font-size: 36px;
+  }
+  .driver-logoProfile {
+    width: 400px;
+    right: 75px;
+  }
+  .permanentNumberDriver img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .flag2,
+  .helmet,
+  .teamLogo {
+    width: 150px;
+    height: 150px;
+  }
+  .flag2 img,
+  .helmet img,
+  .teamLogo img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+
+  .driversBio {
+    display: block;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 0 60px 0 60px;
+  }
 }

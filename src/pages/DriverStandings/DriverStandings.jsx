@@ -4,7 +4,6 @@ import "../../assets/global.css";
 import driversService from "./../../apiServices/testapi";
 import Flag from "react-world-flags";
 import Loader from "../../components/Loader/Loader";
-import NavBar from "../../components/NavBar/NavBar";
 import nationalityToCountryCode from "../../components/other/images";
 import teamLogo from "../../components/other/teamLogo";
 import teamColorClass from "../../components/other/teamColorClass";
@@ -13,10 +12,6 @@ import { Link } from "react-router-dom";
 function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  function LoadingFalse() {
-    setIsLoading(false);
-  }
 
   useEffect(() => {
     driversService
@@ -39,7 +34,7 @@ function DriverStandings() {
         <Loader />
       ) : (
         <div className="div_ds">
-          <div className="DS">{<NavBar />}Driver Standings</div>
+          <div className="DS">Driver Standings</div>
           <div className="standings">
             {drivers.map((driver) => (
               <Link

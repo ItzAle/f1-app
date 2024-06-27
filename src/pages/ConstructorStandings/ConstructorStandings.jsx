@@ -40,7 +40,6 @@ function DriverStandings() {
         <Loader />
       ) : (
         <div className="div_ds">
-          <NavBar />
           <div className="CS">Construcor Standings</div>
           <div className="standings">
             {drivers.map((team) => {
@@ -50,7 +49,7 @@ function DriverStandings() {
                   key={team.Constructor.constructorId}
                 >
                   <div
-                    className="driver_div"
+                    className="constructor_div"
                     key={team.Constructor.constructorId}
                   >
                     <span

@@ -60,7 +60,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav_items {
     z-index: 400;
     position: absolute;
@@ -133,7 +133,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .navbar {
     display: none !important;
   }
