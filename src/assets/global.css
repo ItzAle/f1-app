@@ -29,7 +29,7 @@ a {
 
 body {
   color: black;
-  transition: 0.6s ease;
+  transition: 0.5s ease;
   margin: auto;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -188,4 +188,52 @@ html {
   --color1: #c42021;
   --color2: #dd2c2c;
   --color3: #e56161;
+}
+
+:root {
+  transition: all 0.2s ease;
+  --background-color: #f4f4f4;
+  --text-color: #000;
+  --navbar-background: #ffff;
+  --navbar-text: #fff;
+  --button-background: #555;
+  --button-text: #fff;
+}
+
+[data-theme="dark"] {
+  transition: all 0.2s ease;
+  --background-color: #333;
+  --text-color: #fff;
+  --navbar-background: #222;
+  --navbar-text: #fff;
+  --button-background: #444;
+  --button-text: #fff;
+  --background-buttons: #3c3c3c;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+span {
+  color: var(--text-color);
+}
+
+.nav_items a {
+  color: var(--text-color);
 }
