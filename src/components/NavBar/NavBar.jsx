@@ -6,23 +6,36 @@ import { Switch, styled } from "@mui/material";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const initialTheme = savedTheme
+    ? savedTheme
+    : prefersDarkMode
+    ? "dark"
+    : "light";
+  const [isDarkMode, setIsDarkMode] = useState(initialTheme === "dark");
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-  }, [isOpen]);
+    document.body.setAttribute("data-theme", isDarkMode ? "dark" : "light");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
-  // useEffect(() => {
-  //   const theme = isDarkMode ? "dark" : "light";
-  //   document.documentElement.setAttribute("data-theme", theme);
-  //   localStorage.setItem("theme", theme);
-  // }, [isDarkMode]);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e) => {
+      if (!localStorage.getItem("theme")) {
+        setIsDarkMode(e.matches);
+      }
+    };
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
 
   const ThemeSwitch = styled(Switch)(({ theme }) => ({
     width: 62,
@@ -72,18 +85,6 @@ function NavBar() {
     },
   }));
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.setAttribute("data-theme", "dark");
-    } else {
-      document.body.setAttribute("data-theme", "light");
-    }
-  }, [isDarkMode]);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
-
   const handleClick = () => {
     setIsOpen(false);
   };
@@ -101,12 +102,7 @@ function NavBar() {
           <Link to={"/constructorstandings"}>
             <h1 className="ConstructorStandings">Constructor Standings</h1>
           </Link>
-          <ThemeSwitch
-            onChange={toggleTheme}
-            checked={isDarkMode}
-            offColor="#bbb"
-            onColor="#333"
-          />
+          <ThemeSwitch onChange={toggleTheme} checked={isDarkMode} />
         </div>
       </nav>
       <div className={`nav_items ${isOpen && "open"}`}>
@@ -114,8 +110,6 @@ function NavBar() {
           className="switchMobile"
           onChange={toggleTheme}
           checked={isDarkMode}
-          offColor="#bbb"
-          onColor="#333"
           onClick={handleClick}
         />
         <Link to={"/"} onClick={handleClick}>
@@ -137,7 +131,6 @@ function NavBar() {
           <span></span>
           <span></span>
         </div>
-
         <div className="logo-container">
           <Link to={"/"}>
             <img
