@@ -1,0 +1,275 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-buttons);
+  border-radius: 20px;
+  /* max-width: 800px; */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.driver_name {
+  cursor: default;
+  font-size: 27px;
+  font-family: var(--f1b);
+  text-align: center;
+  position: relative;
+  left: 20px;
+}
+
+.permanentNumberDriver {
+  width: 100%;
+}
+
+.div_nameNumber {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 98px;
+  gap: 10px;
+}
+
+.driver-logoProfile {
+  width: 315px;
+  height: auto;
+  position: relative;
+  right: 95px;
+  top: 31px;
+}
+
+.permanentNumberDriver img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.others {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px 0 0;
+}
+
+.flag2,
+.helmet,
+.teamLogo {
+  transition: all 0.3s ease;
+  width: 120px;
+  height: 120px;
+  background-color: var(--background-buttons);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.flag2 img,
+.helmet img,
+.teamLogo img {
+  max-width: 100%;
+  max-height: 120px;
+}
+
+.mainMainDriver {
+  margin: 2.5rem 10px 0 10px;
+}
+
+.moreInfoDriver {
+  cursor: default;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  font-size: 25px;
+  justify-content: flex-start;
+  padding: 20px 10px 0 10px;
+  flex-direction: column;
+}
+.nPosition,
+.nWins,
+.nPoints,
+.nBirth {
+  font-family: var(--f1r);
+  font-family: 1rem;
+}
+.pBirth,
+.pWins,
+.pPoints,
+.pPosition {
+  text-align: center;
+  color: var(--color3);
+}
+.birthDriver,
+.positionDriver,
+.winsDriver,
+.pointsDriver {
+  background-color: var(--background-buttons);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: auto;
+  text-align: center;
+}
+
+.driversBio {
+  cursor: default;
+  text-align: left;
+  font-size: 1rem;
+  margin: 15px 20px 0 20px;
+  padding-bottom: 30px;
+}
+
+.h1Bio {
+  padding-bottom: 10px;
+  text-decoration: underline var(--color3);
+  font-family: var(--f1b);
+}
+
+@media (min-width: 984px) {
+  .others {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4px 10px 0 10px;
+  }
+  .desktopMainDriver {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .driver-logoProfile {
+    width: 375px;
+  }
+}
+.mainMainDriver {
+  margin: 2.5rem 10px 0 10px;
+}
+
+@media (min-width: 1490px) {
+  .desktopMainDriver {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-left: 7vw;
+  }
+  .others {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mainDiv {
+    max-width: 600px;
+    padding: 30px;
+  }
+  .moreInfoDriver {
+    gap: 40px;
+    font-size: 30px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nPosition,
+  .nWins,
+  .nPoints,
+  .nBirth {
+    font-family: var(--f1r);
+    font-size: 28px;
+  }
+  .pointsDriver:hover,
+  .winsDriver:hover,
+  .birthDriver:hover,
+  .birthDriver:hover,
+  .positionDriver:hover {
+    transform: translateY(-5px);
+  }
+  .pBirth,
+  .pWins,
+  .pPoints,
+  .pPosition {
+    text-align: center;
+    font-size: 28px;
+  }
+  .mainMainDriver {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 28px;
+  }
+  .driver_name {
+    font-size: 36px;
+  }
+  .driver-logoProfile {
+    width: 400px;
+    right: 75px;
+  }
+  .permanentNumberDriver img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .flag2,
+  .helmet,
+  .teamLogo {
+    width: 150px;
+    height: 150px;
+  }
+  .flag2 img,
+  .helmet img,
+  .teamLogo img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+
+  .driversBio {
+    display: block;
+    text-align: justify;
+    font-size: 1rem;
+    margin: 0 200px 0 200px;
+  }
+}
+@media (min-width: 360px) {
+  .flag2,
+  .helmet,
+  .teamLogo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .driver_name {
+    left: 26px;
+  }
+}
+
+@media (min-width: 820px) {
+  .others {
+    justify-content: center;
+    gap: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .others {
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 344px) {
+  .flag2,
+  .helmet,
+  .teamLogo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.driver_div:hover {
+  transition: all 0.3s;
+  opacity: 60%;
+}
+
+.driver_div {
+  transition: all 0.3s;
+}
+
+.teamLogo:hover {
+  transition: all 0.3s ease;
+  opacity: 60%;
+}

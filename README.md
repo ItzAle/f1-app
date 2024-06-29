@@ -1,9 +1,10 @@
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/ItzAle/f1-app/blob/main/README-es.md)
 
 # F1 App made with React
-# You can check the web [here](https://f1-app-sigma.vercel.app).
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# You can check the web [here](https://f1-app-sigma.vercel.app).
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # ❓ What is this?
 
@@ -35,8 +36,13 @@ To layout the web (mobile first) I used the figma program, you can see the proje
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 # 🛠️ Tools
+
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+# ❗Notice
+
+This website is unofficial and are not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V

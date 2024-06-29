@@ -15,11 +15,13 @@
   padding-top: 20px;
 }
 
-.driver_div {
+.constructor_div {
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  gap: 5px;
 }
 
 .position,
@@ -29,7 +31,7 @@
   flex: 0 0 auto;
 }
 
-.driver_div p {
+.constructor_div_div p {
   margin: 0 10px;
 }
 
@@ -68,6 +70,12 @@
   width: 80px;
   text-align: right;
   margin-left: auto;
+}
+
+
+.constructor_div:hover{
+  transition: all 0.3s;
+  opacity: 40%;
 }
 
 /* ======================================== */

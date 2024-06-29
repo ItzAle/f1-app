@@ -11,40 +11,48 @@
   display: none;
 }
 .logo {
+  transition: all 0.3s ease;
   margin: 10px;
   width: 100%;
   height: 30px;
+}
+
+.logo:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-5px);
 }
 
 .navbar_desk {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  background-color: white;
+  background-color: var(--background-color);
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
-
 .buttons {
   transition: all 0.5s ease;
   display: flex;
   gap: 10px;
   font-size: 10px;
   padding: 0 10px 0 0;
+  align-items: center;
 }
 .DriverStandings {
-  transition: all 0.5 ease;
+  transition: all 0.3s ease;
 }
 .DriverStandings:hover {
-  transition: all 0.5s ease;
-  color: red;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  color: var(--color3);
 }
 .ConstructorStandings:hover {
-  transition: all 0.5s ease;
-  color: red;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  color: var(--color3);
 }
 .ConstructorStandings {
-  transition: all 0.5 ease;
+  transition: all 0.3s ease;
 }
 .nav_items a {
   font-family: "F1 Bold";
@@ -56,25 +64,39 @@
   position: relative;
   text-decoration: none;
   font-size: 20px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+.home_mobile,
+.ds_mobile,
+.cs_mobile {
+  font: var(--f1r);
+  font-size: 28px;
+}
+.home_mobile:active,
+.ds_mobile:active,
+.cs_mobile:active {
+  opacity: 40%;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
   .nav_items {
     z-index: 400;
     position: absolute;
     top: 50px;
     left: 0;
-    background: white;
+    gap: 70px;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: -webkit-fill-available;
+    height: 100%;
     transform: translateX(-100%);
-    transition: 0.3s ease all;
+    transition: 0.5s ease all;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   .nav_items.open {
     transform: translateX(0) !important;
@@ -133,7 +155,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .navbar {
     display: none !important;
   }
