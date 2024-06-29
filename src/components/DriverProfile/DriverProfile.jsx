@@ -11,6 +11,7 @@ import Flag from "react-world-flags";
 import driversBio from "../other/driversBio";
 import "../../assets/global.css";
 import "./DriverProfile.css";
+import { Link } from "react-router-dom";
 
 function DriverProfile() {
   const { id } = useParams();
@@ -83,7 +84,6 @@ function DriverProfile() {
                   driver.Driver.permanentNumber
                 )}
               </div>
-
               {driversImage2[driver.Driver.driverId] && (
                 <img
                   className="driver-logoProfile"
@@ -97,6 +97,10 @@ function DriverProfile() {
                 className="flag2"
                 code={nationalityToCountryCode[driver.Driver.nationality]}
               />
+              <Link
+                  to={`/constructor/${driver.Constructors[0].constructorId}`}
+                  key={driver.Constructors[0].constructorId}
+                >
               {teamLogo[driver.Constructors[0].name] && (
                 <img
                   className="teamLogo"
@@ -104,6 +108,7 @@ function DriverProfile() {
                   alt={driver.Constructors[0].name}
                 />
               )}
+              </Link>
               {helmets[driver.Driver.driverId] && (
                 <img
                   className="helmet"
