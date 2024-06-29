@@ -4,7 +4,6 @@ import "../../assets/global.css";
 import teamsService from "./../../apiServices/constructorsApi";
 import Flag from "react-world-flags";
 import Loader from "../../components/Loader/Loader";
-import NavBar from "../../components/NavBar/NavBar";
 import nationalityToCountryCode from "../../components/other/images";
 import teamColorClass from "../../components/other/teamColorClass";
 import teamLogo from "../../components/other/teamLogo";

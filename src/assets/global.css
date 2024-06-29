@@ -191,7 +191,6 @@ html {
 }
 
 :root {
-  transition: all 0.2s ease;
   --background-color: #f4f4f4;
   --text-color: #000;
   --navbar-background: #ffff;
@@ -201,14 +200,18 @@ html {
 }
 
 [data-theme="dark"] {
-  transition: all 0.2s ease;
-  --background-color: #333;
+  --background-color: #121212;
   --text-color: #fff;
   --navbar-background: #222;
   --navbar-text: #fff;
   --button-background: #444;
   --button-text: #fff;
-  --background-buttons: #3c3c3c;
+  --background-buttons: linear-gradient(
+    37deg,
+    rgba(60, 60, 60, 0.2) 60%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  --background-buttons2: #4d4b4b8f;
 }
 
 body {

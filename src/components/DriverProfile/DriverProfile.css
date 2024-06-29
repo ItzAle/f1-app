@@ -1,7 +1,7 @@
 .mainDiv {
   display: flex;
   justify-content: center;
-  background-color: var(--background-buttons);
+  background: var(--background-buttons);
   border-radius: 20px;
   /* max-width: 800px; */
   padding: 20px;
@@ -56,7 +56,7 @@
   transition: all 0.3s ease;
   width: 120px;
   height: 120px;
-  background-color: var(--background-buttons);
+  background: var(--background-buttons2);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -101,7 +101,7 @@
 .positionDriver,
 .winsDriver,
 .pointsDriver {
-  background-color: var(--background-buttons);
+  background: var(--background-buttons2);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
