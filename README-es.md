@@ -44,5 +44,8 @@ Para maquetar la web (mobile first) uso el programa figma, puedes ver el proyect
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 # ❗¡Importante!
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a5feda851aa4a3b09c67c52a03dc4353051d142
 Este sitio web no es oficial y no están asociados de ninguna manera con las empresas de Formula 1. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX y marcas relacionadas son marcas registradas de Formula One Licensing B.V

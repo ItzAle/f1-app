@@ -44,5 +44,8 @@ To layout the web (mobile first) I used the figma program, you can see the proje
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 # ❗Notice
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a5feda851aa4a3b09c67c52a03dc4353051d142
 This website is unofficial and are not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V
