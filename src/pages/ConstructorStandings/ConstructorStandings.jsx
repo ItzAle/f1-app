@@ -22,7 +22,7 @@ function DriverStandings() {
     teamsService
       .getAll()
       .then((data) => {
-        console.log("API Response:", data); // Add this line to check the API response structure
+        console.log("API Response:", data);
         const teamsList =
           data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
         setDrivers(teamsList);
