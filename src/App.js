@@ -15,21 +15,10 @@ import ConstructorsProfile from "./components/ConstructorsProfile/ConstructorsPr
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import RedirectToLandingPage from "./components/RedirectToLandingPage/RedirectToLandingPage";
-import { useEffect, useState } from "react";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
-
-  useEffect(() => {
-    const theme = isDarkMode ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [isDarkMode]);
-
   return (
-    <div className={`App ${isDarkMode ? "dark-mode" : ""}`}>
+    <div>
       <ToastContainer />
       <Routes>
         <Route path="/" element={<LandingPage />} />

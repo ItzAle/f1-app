@@ -214,6 +214,15 @@ html {
   --background-buttons2: #4d4b4b8f;
 }
 
+[data-theme="dark"] {
+  .Toastify__toast-theme--light {
+    background: #121212 !important;
+  }
+  .Toastify__close-button {
+    color: white !important;
+  }
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text-color);
