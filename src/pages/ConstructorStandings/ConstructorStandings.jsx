@@ -40,7 +40,7 @@ function DriverStandings() {
         <Loader />
       ) : (
         <div className="div_ds">
-          <div className="CS">Construcor Standings</div>
+          <div className="CS">Constructor Standings</div>
           <div className="standings">
             {drivers.map((team) => {
               return (

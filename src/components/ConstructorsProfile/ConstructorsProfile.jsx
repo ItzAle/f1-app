@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import teamsService from "../../apiServices/constructorsApi"; // Asegúrate de que la ruta sea correcta
+import teamsService from "../../apiServices/constructorsApi";
 import { useParams } from "react-router";
 import Loader from "../Loader/Loader";
 import driversImage2 from "../../components/other/driversImage2";
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 function ConstructorsProfile() {
   const { id } = useParams();
   const [team, setTeam] = useState(null);
-  const [driver, setDriver] = useState([]);
+  const [drivers, setDrivers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [totalWins, setTotalWins] = useState(0);
@@ -26,22 +26,25 @@ function ConstructorsProfile() {
       setLoading(true);
       try {
         const fetchedDrivers = await teamsService.getDriversByConstructor(id);
-        if (fetchedDrivers.length > 0) {
+        const filteredDrivers = fetchedDrivers.filter(
+          (driver) => driver.Driver.driverId !== "bearman"
+        );
+        if (filteredDrivers.length > 0) {
           setTeam(
-            fetchedDrivers[0].Constructors.find(
+            filteredDrivers[0].Constructors.find(
               (constructor) => constructor.constructorId === id
             )
           );
-          setDriver(fetchedDrivers);
+          setDrivers(filteredDrivers);
 
-          const pointsSum = fetchedDrivers.reduce((sum, driver) => {
-            const points = parseFloat(driver.points) || 0; // Asegurarse de que points es un número
+          const pointsSum = filteredDrivers.reduce((sum, driver) => {
+            const points = parseFloat(driver.points) || 0;
             return sum + points;
           }, 0);
           setTotalPoints(pointsSum);
 
-          const winsSum = fetchedDrivers.reduce((sum, driver) => {
-            const wins = parseInt(driver.wins, 10) || 0; // Asegurarse de que wins es un número
+          const winsSum = filteredDrivers.reduce((sum, driver) => {
+            const wins = parseInt(driver.wins, 10) || 0;
             return sum + wins;
           }, 0);
           setTotalWins(winsSum);
@@ -72,49 +75,43 @@ function ConstructorsProfile() {
 
   return (
     <>
-      <div>
-        <div className="teamContainer">
-          <p className="teamName">{team.name}</p>
-          {driver.map((driver) => (
-            <div
-              className="driver-logoProfileCardiv"
-              key={driver.Driver.driverId}
-            ></div>
-          ))}
-          {teamCars[team.name] && (
-            <img
-              className="teamCar"
-              src={teamCars[team.name]}
-              alt={team.name}
-            />
-          )}
-        </div>
-      </div>
-      <div className="infoTeam">
-        <h1>Drivers</h1>
-        {driver.map((driver) => (
-          <h1 key={driver.Driver.driverId}>
-            <Link to={`/driver/${driver.Driver.driverId}`}>
-              {driversImage2[driver.Driver.driverId] && (
-                <img
-                  className="driver-logoProfile"
-                  src={driversImage2[driver.Driver.driverId]}
-                  alt={driver.Driver.driverId}
-                />
-              )}
-              {driver.Driver.givenName} {driver.Driver.familyName}
-            </Link>
-          </h1>
-        ))}
-        <Flag
-          className="flag"
-          code={nationalityToCountryCode[team.nationality]}
-        />
-        {teamLogo[team.name] && (
-          <img className="teamLogo" src={teamLogo[team.name]} alt={team.name} />
+      <div className="teamContainer">
+        {teamCars[team.name] && (
+          <img className="teamCar" src={teamCars[team.name]} alt={team.name} />
         )}
-        <h1>Total Wins: {totalWins} </h1>
-        <h1>Total Points: {totalPoints} </h1>
+        <p className="teamName">{team.name}</p>
+      </div>
+      <div className="otherDivDesktop">
+        <div className="driversContainer">
+          {drivers.map((driver) => (
+            <div className="driver-card" key={driver.Driver.driverId}>
+              <Link to={`/driver/${driver.Driver.driverId}`}>
+                {driversImage2[driver.Driver.driverId] && (
+                  <img
+                    className="driver-logoProfileCar"
+                    src={driversImage2[driver.Driver.driverId]}
+                    alt={driver.Driver.driverId}
+                  />
+                )}
+                <div className="driver-card-content">
+                  <p className="driver-card-title">
+                    {driver.Driver.givenName} {driver.Driver.familyName}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="infoTeam">
+          <div className="info-card">
+            <h1 className="info-title">Total Wins</h1>
+            <p className="info-value">{totalWins}</p>
+          </div>
+          <div className="info-card">
+            <h1 className="info-title">Total Points</h1>
+            <p className="info-value">{totalPoints}</p>
+          </div>
+        </div>
       </div>
     </>
   );

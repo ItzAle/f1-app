@@ -16,6 +16,7 @@
 }
 
 .constructor_div {
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -69,6 +70,12 @@
   width: 80px;
   text-align: right;
   margin-left: auto;
+}
+
+
+.constructor_div:hover{
+  transition: all 0.3s;
+  opacity: 40%;
 }
 
 /* ======================================== */
