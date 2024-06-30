@@ -3,6 +3,8 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "./../../assets/images/f1logo.png";
 import ThemeSwitch from "../other/ThemeSwitch";
+import { FaGithub } from "react-icons/fa";
+import ExternalLink from "../ExternalLink/ExternalLink";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -36,9 +36,11 @@
   gap: 10px;
   font-size: 10px;
   padding: 0 10px 0 0;
-  align-items: center;
+  font-size: 40px;
+  align-items: baseline;
 }
 .DriverStandings {
+  font-size: 20px;
   transition: all 0.3s ease;
 }
 .DriverStandings:hover {
@@ -52,6 +54,7 @@
   color: var(--color3);
 }
 .ConstructorStandings {
+  font-size: 20px;
   transition: all 0.3s ease;
 }
 .nav_items a {
@@ -81,6 +84,10 @@
   transition: all 0.3s ease;
 }
 
+.githubLink {
+  font-size: 40px;
+  padding-left: 10px;
+}
 @media (max-width: 1024px) {
   .nav_items {
     z-index: 400;
@@ -164,8 +171,12 @@
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    padding: 5px 10px 20px 10px;
   }
   .nav_items {
     display: none !important;
+  }
+  .githubLink {
+    display: none;
   }
 }

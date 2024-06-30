@@ -13,6 +13,7 @@
 
 .standings {
   padding-top: 20px;
+  padding-bottom: 30%;
 }
 
 .constructor_div {
@@ -72,8 +73,7 @@
   margin-left: auto;
 }
 
-
-.constructor_div:hover{
+.constructor_div:hover {
   transition: all 0.3s;
   opacity: 40%;
 }

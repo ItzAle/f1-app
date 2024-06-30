@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-top: 3px solid var(--color3);
+  gap: 10px;
+  padding: 10px 0 10px 0;
+  font-size: 30px;
+  width: 100%;
+  margin: 0 0 0 0;
+  position: inherit;
+  bottom: 0;
+}
+.ergastLink {
+  font-family: var(--f1r);
+  font-size: 13px;
+}
+
+.Ergast {
+  color: var(--color3);
+}
