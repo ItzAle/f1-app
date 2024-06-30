@@ -29,6 +29,16 @@ function NavBar() {
 
   const handleClick = () => {
     setIsOpen(false);
+    document.body.classList.remove("no-scroll");
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
   };
 
   return (
@@ -65,10 +75,7 @@ function NavBar() {
         </Link>
       </div>
       <div className="mobileDiv">
-        <div
-          className={`nav_toggle ${isOpen && "open"}`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <div className={`nav_toggle ${isOpen && "open"}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>

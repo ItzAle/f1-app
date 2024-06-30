@@ -13,10 +13,6 @@ function DriverStandings() {
   const [drivers, setDrivers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // function LoadingFalse() {
-  //   setIsLoading(false);
-  // }
-
   useEffect(() => {
     teamsService
       .getAll()
