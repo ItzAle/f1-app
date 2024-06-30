@@ -52,6 +52,12 @@ function DriverProfile() {
     return age;
   };
 
+  useEffect(() => {
+    if (driver) {
+      document.title = ` ${driver.Driver.givenName} ${driver.Driver.familyName}`;
+    }
+  }, [driver]);
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -98,16 +104,16 @@ function DriverProfile() {
                 code={nationalityToCountryCode[driver.Driver.nationality]}
               />
               <Link
-                  to={`/constructor/${driver.Constructors[0].constructorId}`}
-                  key={driver.Constructors[0].constructorId}
-                >
-              {teamLogo[driver.Constructors[0].name] && (
-                <img
-                  className="teamLogo"
-                  src={teamLogo[driver.Constructors[0].name]}
-                  alt={driver.Constructors[0].name}
-                />
-              )}
+                to={`/constructor/${driver.Constructors[0].constructorId}`}
+                key={driver.Constructors[0].constructorId}
+              >
+                {teamLogo[driver.Constructors[0].name] && (
+                  <img
+                    className="teamLogo"
+                    src={teamLogo[driver.Constructors[0].name]}
+                    alt={driver.Constructors[0].name}
+                  />
+                )}
               </Link>
               {helmets[driver.Driver.driverId] && (
                 <img

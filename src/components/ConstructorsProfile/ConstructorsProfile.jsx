@@ -61,6 +61,12 @@ function ConstructorsProfile() {
     fetchTeamAndDrivers();
   }, [id]);
 
+  useEffect(() => {
+    if (team) {
+      document.title = ` ${team.name}`;
+    }
+  }, [team]);
+
   if (loading) {
     return <Loader />;
   }
