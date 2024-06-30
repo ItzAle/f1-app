@@ -54,7 +54,21 @@ function DriverProfile() {
 
   useEffect(() => {
     if (driver) {
-      document.title = ` ${driver.Driver.givenName} ${driver.Driver.familyName}`;
+      document.title = `${driver.Driver.givenName} ${driver.Driver.familyName}`;
+
+      const constructor = driver.Constructors && driver.Constructors[0];
+      if (constructor && teamLogo[constructor.name]) {
+        const favicon = document.getElementById("favicon");
+        if (favicon) {
+          favicon.href = teamLogo[constructor.name];
+        } else {
+          const link = document.createElement("link");
+          link.id = "favicon";
+          link.rel = "icon";
+          link.href = teamLogo[constructor.name];
+          document.head.appendChild(link);
+        }
+      }
     }
   }, [driver]);
 

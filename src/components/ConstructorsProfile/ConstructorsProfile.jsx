@@ -11,6 +11,7 @@ import teamCars from "../other/teamCars";
 import "../../assets/global.css";
 import "./ConstructorsProfile.css";
 import { Link } from "react-router-dom";
+import teamLogo from "../other/teamLogo";
 
 function ConstructorsProfile() {
   const { id } = useParams();
@@ -64,6 +65,18 @@ function ConstructorsProfile() {
   useEffect(() => {
     if (team) {
       document.title = ` ${team.name}`;
+    }
+    if (team && teamLogo[team.name]) {
+      const favicon = document.getElementById("favicon");
+      if (favicon) {
+        favicon.href = teamLogo[team.name];
+      } else {
+        const link = document.createElement("link");
+        link.id = "favicon";
+        link.rel = "icon";
+        link.href = teamLogo[team.name];
+        document.head.appendChild(link);
+      }
     }
   }, [team]);
 
