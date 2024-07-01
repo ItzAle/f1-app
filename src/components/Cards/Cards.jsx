@@ -19,7 +19,7 @@ function Cards() {
         <img className="cs" src={CS} alt="" />
       </Link>
       <Link to={"/race"}>
-        <img src={RS} alt="" />
+        <img className="race" src={RS} alt="" />
       </Link>
     </div>
   );
