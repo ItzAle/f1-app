@@ -60,11 +60,11 @@ const RaceCountdown = () => {
     <div className="countdown-container">
       {nextRace ? (
         <div className="countdown-content">
-          <h1>Next Race: {nextRace.raceName}</h1>
-          <p>
+          <h1 className="NR">Next Race: {nextRace.raceName}</h1>
+          <p className="raceC">
             {nextRace.date} at {nextRace.time.replace(":00Z", "")}
           </p>
-          <h2>Time remaining: {timeRemaining}</h2>
+          <h2 className="h2RC">Time remaining: {timeRemaining}</h2>
         </div>
       ) : (
         <Loader />
