@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getSprintResults } from "../../apiServices/racesApi";
 import "./SprintResultsPage.css";
 import { Link } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function SprintResultsPage() {
   const { round } = useParams();
@@ -61,7 +62,11 @@ function SprintResultsPage() {
   };
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {

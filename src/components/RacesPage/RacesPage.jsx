@@ -4,6 +4,7 @@ import { getRaces } from "../../apiServices/racesApi";
 import Flag from "react-world-flags";
 import "./RacesPage.css";
 import countryCode from "../other/countryCode";
+import Loader from "../Loader/Loader";
 
 function RacesPage() {
   const [races, setRaces] = useState([]);
@@ -35,7 +36,11 @@ function RacesPage() {
   }, []);
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
