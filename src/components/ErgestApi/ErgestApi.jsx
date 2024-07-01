@@ -1,5 +1,4 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
 
 function ErgastApi() {
   return (
@@ -9,7 +8,7 @@ function ErgastApi() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      This app can be posible thanks thanks to{" "}
+      This app can be possible thanks to{" "}
       <span className="Ergast">ErgastApi</span>
     </a>
   );

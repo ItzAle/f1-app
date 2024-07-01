@@ -190,8 +190,9 @@ html {
   --color3: #e56161;
 }
 
-:root {
+/* :root {
   --background-color: #f4f4f4;
+  --background-color2: #b8b8b8;
   --text-color: #000;
   --navbar-background: #ffff;
   --navbar-text: #fff;
@@ -200,10 +201,12 @@ html {
   --text-color2: #312f2f;
   --text-color3: #202020;
   --button-background: #c2b9b9;
+  --background-buttons: #dbd7d7;
 }
 
 [data-theme="dark"] {
   --background-color: #121212;
+  --background-color2: #474747;
   --text-color: #fff;
   --navbar-background: #222;
   --navbar-text: #fff;
@@ -216,8 +219,35 @@ html {
   );
   --background-buttons2: #4d4b4b8f;
   --text-color2: #b3acac;
-  --background-color2: #8a87878f;
   --text-color3: #d8c6c6;
+} */
+
+:root {
+  --background-color: #ffffff;
+  --background-color2: #e0e0e0;
+  --text-color: #333333;
+  --navbar-background: #ffffff;
+  --navbar-text: #333333;
+  --button-background: #e56161;
+  --button-text: #ffffff;
+  --text-color2: #555555;
+  --text-color3: #777777;
+  --background-buttons: #f0f0f0;
+  --background-buttons-hover: #e0e0e0;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --background-color2: #1e1e1e;
+  --text-color: #ffffff;
+  --navbar-background: #1e1e1e;
+  --navbar-text: #ffffff;
+  --button-background: #e56161;
+  --button-text: #ffffff;
+  --background-buttons: #2a2a2a;
+  --background-buttons-hover: #3a3a3a;
+  --text-color2: #aaaaaa;
+  --text-color3: #888888;
 }
 
 [data-theme="dark"] {

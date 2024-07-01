@@ -1,0 +1,32 @@
+/* RaceCountdown.css */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27vh;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.countdown-content {
+  font-family: var(--f1r);
+  background-color: var(--background-color2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--text-color);
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 21px;
+  color: var(--color2);
+}

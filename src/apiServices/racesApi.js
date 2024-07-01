@@ -42,3 +42,26 @@ export const getSprintRaces = async () => {
   );
   return response.data.MRData.RaceTable.Races;
 };
+
+export const getQualifyingResults = async (round) => {
+  const response = await fetch(`${BASE_URL}/2024/${round}/qualifying.json`);
+  const data = await response.json();
+  return data.MRData.RaceTable.Races[0]?.QualifyingResults || [];
+};
+
+export const getAllQualifyingResults = async () => {
+  const response = await axios.get(`${BASE_URL}/2024.json`);
+  const races = response.data.MRData.RaceTable.Races;
+
+  const qualifyingResults = await Promise.all(
+    races.map(async (race) => {
+      const results = await getQualifyingResults(race.round);
+      return {
+        ...race,
+        results,
+      };
+    })
+  );
+
+  return qualifyingResults;
+};

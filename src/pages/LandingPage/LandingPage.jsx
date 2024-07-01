@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Cards from "../../components/Cards/Cards";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../assets/global.css";
-import Loader from "../../components/Loader/Loader";
+import RaceCountdown from "../../components/RaceCountDown/RaceCountDown";
+import TwitterFeed from "../../components/TwitterFeed/TwitterFeed";
+import "./LandingPage.css";
 
 function LandingPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     document.title = "Home";
-    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -26,13 +25,26 @@ function LandingPage() {
 
   return (
     <div>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <div>
-          <Cards />
+      <div className="landing-container">
+        <RaceCountdown />
+        <div className="buttons-container">
+          <Link to="/driverstandings" className="landing-button">
+            Driver Standings
+          </Link>
+          <Link to="/constructorstandings" className="landing-button">
+            Constructor Standings
+          </Link>
+          <Link to="/qualifying" className="landing-button">
+            Qualifyings
+          </Link>
+          <Link to="/race" className="landing-button">
+            Race Results
+          </Link>
         </div>
-      )}
+        <div className="twitter-feed-container">
+          <TwitterFeed />
+        </div>
+      </div>
     </div>
   );
 }

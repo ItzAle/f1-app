@@ -54,6 +54,9 @@ function NavBar() {
           <Link to={"/constructorstandings"}>
             <h1 className="ConstructorStandings">Constructor Standings</h1>
           </Link>
+          <Link to={"/qualifying"}>
+            <h1 className="ConstructorStandings">Qualifying</h1>
+          </Link>
           <Link to={"/race"}>
             <h1 className="ConstructorStandings">Races</h1>
           </Link>
@@ -75,6 +78,9 @@ function NavBar() {
         </Link>
         <Link to={"/constructorstandings"} onClick={handleClick}>
           <h1 className="cs_mobile">Constructor Standings</h1>
+        </Link>
+        <Link to={"/qualifying"} onClick={handleClick}>
+          <h1 className="cs_mobile">Qualifyings</h1>
         </Link>
         <Link to={"/race"} onClick={handleClick}>
           <h1 className="cs_mobile">Race Results</h1>

@@ -52,7 +52,6 @@
 
 .results-table td {
   font-size: 1em;
-  color: var(--text-color3);
 }
 
 .results-table td:first-child,
@@ -74,4 +73,17 @@
 
 .error {
   color: #dc3545;
+}
+
+.SprintandQualy {
+  display: flex;
+  padding-bottom: 10px;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.qualy {
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: center;
 }

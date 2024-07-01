@@ -1,6 +1,5 @@
 import axios from "axios";
 
-const driversApi = "https://ergast.com/api/f1/current/driverstandings";
 const driversA = "https://ergast.com/api/f1/current/driverStandings.json";
 
 const driversService = {
@@ -14,6 +13,5 @@ const driversService = {
       .then((res) => res.data);
   },
 };
-
 
 export default driversService;

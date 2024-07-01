@@ -1,25 +1,22 @@
 import React from "react";
-import DS from "../../assets/images/test/DS.png";
-import CS from "../../assets/images/test/CS.png";
-import Results from "../../assets/images/test/Results.png";
-import RS from "../../assets/images/test/RS.png";
-import Schedule from "../../assets/images/test/Schedule.png";
-import Archive from "../../assets/images/test/Archive.png";
 import { Link } from "react-router-dom";
-import "../../assets/global.css";
 import "./Cards.css";
 
 function Cards() {
   return (
-    <div className="parent">
-      <Link to={"/driverstandings"}>
-        <img className="ds" src={DS} alt="" />
+    <div className="landing-container">
+      <h1>Welcome to the F1 App</h1>
+      <Link to="/driverstandings" className="landing-button">
+        Driver Standings
       </Link>
-      <Link to={"/constructorstandings"}>
-        <img className="cs" src={CS} alt="" />
+      <Link to="/constructorstandings" className="landing-button">
+        Constructor Standings
       </Link>
-      <Link to={"/race"}>
-        <img className="race" src={RS} alt="" />
+      <Link to="/qualifying" className="landing-button">
+        Qualifyings
+      </Link>
+      <Link to="/race" className="landing-button">
+        Race Results
       </Link>
     </div>
   );

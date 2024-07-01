@@ -1,6 +1,6 @@
 import "./App.css";
 import "./assets/global.css";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import "./assets/fonts/Formula1-Bold.otf";
 import "./assets/fonts/Formula1-Regular.otf";
@@ -16,7 +16,8 @@ import RedirectToLandingPage from "./components/RedirectToLandingPage/RedirectTo
 import RacesPage from "./components/RacesPage/RacesPage";
 import RaceResultsPage from "./components/RaceResultsPage/RaceResultsPage";
 import SprintResultsPage from "./components/SprintResultsPage/SprintResultPage";
-
+import QualifyingResultsPage from "./components/QualifyingResults/QualifyingResults";
+import QualifyingPage from "./components/QualifyingPage/QualifyingPage";
 function App() {
   return (
     <div>
@@ -35,6 +36,8 @@ function App() {
         <Route path="/race" element={<RacesPage />} />
         <Route path="/race/:race" element={<RaceResultsPage />} />
         <Route path="/sprint/:round" element={<SprintResultsPage />} />
+        <Route path="/qualifying/:round" element={<QualifyingResultsPage />} />
+        <Route path="/qualifying/" element={<QualifyingPage />} />
       </Routes>
     </div>
   );

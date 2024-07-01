@@ -8,7 +8,7 @@ function RaceResultsPage() {
   const { race } = useParams();
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
   const [sprintAvailable, setSprintAvailable] = useState(false);
   const [fastestLapDriver, setFastestLapDriver] = useState([]);
 
@@ -77,13 +77,18 @@ function RaceResultsPage() {
   return (
     <div className="results-container">
       <h1>Race Results - Round {race}</h1>
-      {sprintAvailable && (
-        <div className="sprint-button-container">
-          <Link to={`/sprint/${race}`} className="sprint-button">
-            View Sprint Results
-          </Link>
-        </div>
-      )}
+      <div className="SprintandQualy">
+        <Link className="qualy" to={`/qualifying/${race}`}>
+          View Qualy
+        </Link>
+        {sprintAvailable && (
+          <div className="sprint-button-container">
+            <Link to={`/sprint/${race}`} className="sprint-button">
+              View Sprint Results
+            </Link>
+          </div>
+        )}
+      </div>
       <table className="results-table">
         <thead>
           <tr>
