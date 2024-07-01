@@ -2,7 +2,7 @@
 
 # F1 App creada en React.
 
-# Puedes ver la web [aquí.](https://f1-app-sigma.vercel.app)
+# Puedes ver la web [aquí.](https://formula1app-ale.vercel.app/)
 
 El proyecto esta creado con [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,4 +44,5 @@ Para maquetar la web (mobile first) uso el programa figma, puedes ver el proyect
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 # ❗¡Importante!
+
 Este sitio web no es oficial y no están asociados de ninguna manera con las empresas de Formula 1. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX y marcas relacionadas son marcas registradas de Formula One Licensing B.V
