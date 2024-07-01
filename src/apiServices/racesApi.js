@@ -22,7 +22,7 @@ export const getRaceResults = async (round) => {
 export const getSprintResults = async (round) => {
   try {
     const response = await axios.get(`${BASE_URL}/2024/${round}/sprint.json`);
-    console.log("API response:", response.data);
+    //console.log("API response:", response.data);
 
     const raceData = response.data.MRData.RaceTable.Races[0];
     return raceData.SprintResults;
