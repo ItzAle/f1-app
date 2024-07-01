@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RaceCountDown.css";
+import Loader from "../Loader/Loader";
 
 const RaceCountdown = () => {
   const [nextRace, setNextRace] = useState(null);
@@ -66,7 +67,7 @@ const RaceCountdown = () => {
           <h2>Time remaining: {timeRemaining}</h2>
         </div>
       ) : (
-        <p>Loading...</p>
+        <Loader />
       )}
     </div>
   );
