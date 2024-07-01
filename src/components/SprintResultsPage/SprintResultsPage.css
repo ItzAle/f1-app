@@ -1,0 +1,77 @@
+.sprint-results-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sprint-results-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.teamLogoResult {
+  width: 30px;
+  height: 100%;
+}
+
+.sprint-results-list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.driver-name.fastest-lap {
+  color: purple;
+  font-weight: bold;
+}
+.sprint-result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.sprint-result-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.sprint-result-item:hover {
+  opacity: 20%;
+  transition: all 0.3s ease;
+  /* background-color: var(--button-background); */
+}
+
+.sprint-result-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.sprint-result-item p:first-child {
+  text-align: center;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 20px;
+}
+
+.loading {
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+}

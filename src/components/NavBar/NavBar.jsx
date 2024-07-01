@@ -3,8 +3,6 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "./../../assets/images/f1logo.png";
 import ThemeSwitch from "../other/ThemeSwitch";
-import { FaGithub } from "react-icons/fa";
-import ExternalLink from "../ExternalLink/ExternalLink";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +54,9 @@ function NavBar() {
           <Link to={"/constructorstandings"}>
             <h1 className="ConstructorStandings">Constructor Standings</h1>
           </Link>
+          <Link to={"/race"}>
+            <h1 className="ConstructorStandings">Races</h1>
+          </Link>
           <ThemeSwitch onChange={toggleTheme} checked={isDarkMode} />
         </div>
       </nav>
@@ -74,6 +75,9 @@ function NavBar() {
         </Link>
         <Link to={"/constructorstandings"} onClick={handleClick}>
           <h1 className="cs_mobile">Constructor Standings</h1>
+        </Link>
+        <Link to={"/race"} onClick={handleClick}>
+          <h1 className="cs_mobile">Race Results</h1>
         </Link>
       </div>
       <div className="mobileDiv">

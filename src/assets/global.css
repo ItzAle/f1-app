@@ -197,6 +197,9 @@ html {
   --navbar-text: #fff;
   --button-background: #555;
   --button-text: #fff;
+  --text-color2: #312f2f;
+  --text-color3: #202020;
+  --button-background: #c2b9b9;
 }
 
 [data-theme="dark"] {
@@ -207,11 +210,14 @@ html {
   --button-background: #444;
   --button-text: #fff;
   --background-buttons: linear-gradient(
-    37deg,
-    rgba(60, 60, 60, 0.2) 60%,
+    -24deg,
+    rgba(60, 60, 60, 0.2) 41%,
     rgba(255, 255, 255, 0.2) 100%
   );
   --background-buttons2: #4d4b4b8f;
+  --text-color2: #b3acac;
+  --background-color2: #8a87878f;
+  --text-color3: #d8c6c6;
 }
 
 [data-theme="dark"] {

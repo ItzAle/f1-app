@@ -1,0 +1,71 @@
+.races-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.races-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--text-color);
+}
+
+.races-list {
+  list-style: none;
+  padding: 0;
+}
+
+.race-item {
+  border: 1px solid var(--button-background);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: var(--background-color);
+  transition: all 0.3s ease;
+}
+
+.driver-name.fastest-lap {
+  color: purple;
+}
+
+.race-item:hover {
+  opacity: 30%;
+  transition: all 0.3s ease;
+}
+
+.race-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.race-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.race-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.race-date,
+.race-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1em;
+  margin: 3px 0;
+  color: var(--text-color2);
+}
+
+.race-flag {
+  height: 20px;
+}
+
+.race-flag img {
+  width: 120px;
+  height: 120px;
+}

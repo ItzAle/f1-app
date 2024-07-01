@@ -18,18 +18,9 @@ function Cards() {
       <Link to={"/constructorstandings"}>
         <img className="cs" src={CS} alt="" />
       </Link>
-      {/* <Link to={"/raceresults"}>
+      <Link to={"/race"}>
         <img src={RS} alt="" />
       </Link>
-      <Link to={"/schedule"}>
-        <img src={Schedule} alt="" />
-      </Link>
-      <Link to={"/driversnteams"}>
-        <img src={Results} alt="" />
-      </Link>
-      <Link to={"/archive"}>
-        <img src={Archive} alt="" />
-      </Link> */}
     </div>
   );
 }
