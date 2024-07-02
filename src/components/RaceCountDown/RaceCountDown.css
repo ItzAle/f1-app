@@ -15,17 +15,42 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.NR h1 {
+.NR {
   font-size: 40px;
   color: var(--text-color);
 }
 
-.raceC p {
+.raceC {
   font-size: 1.5rem;
   color: var(--text-color);
 }
 
-.h2RC h2 {
+.h2RC {
   font-size: 21px;
   color: var(--color2);
+}
+
+@media (min-width: 485px) {
+  .h2RC {
+    font-size: 23px;
+    color: var(--color2);
+  }
+}
+@media (min-width: 374px) {
+  .h2RC {
+    font-size: 16px;
+    color: var(--color2);
+  }
+  .NR {
+    font-size: 30px;
+  }
+}
+@media (min-width: 360px) {
+  .h2RC {
+    font-size: 15px;
+    color: var(--color2);
+  }
+  .NR {
+    font-size: 28px;
+  }
 }

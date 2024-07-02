@@ -8,8 +8,9 @@ import Loader from "../Loader/Loader";
 
 function RacesPage() {
   const [races, setRaces] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [sortByLatest, setSortByLatest] = useState(false);
 
   useEffect(() => {
     const fetchRaces = async () => {
@@ -23,25 +24,25 @@ function RacesPage() {
           .sort((a, b) => new Date(a.date) - new Date(b.date));
 
         setRaces(pastRaces);
-        setLoading(false);
+        setisLoading(false);
         document.title = "Races";
       } catch (error) {
         console.error("Error fetching races:", error);
         setError(error);
-        setLoading(false);
+        setisLoading(false);
       }
     };
 
     fetchRaces();
   }, []);
 
-  if (loading) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
-  }
+  const toggleSortOrder = () => {
+    setSortByLatest(!sortByLatest);
+  };
+
+  const sortedRaces = sortByLatest
+    ? [...races].sort((a, b) => new Date(b.date) - new Date(a.date))
+    : races;
 
   if (error) {
     return <div className="error">Error: {error.message}</div>;
@@ -50,28 +51,39 @@ function RacesPage() {
   return (
     <div className="races-container">
       <h1>Races</h1>
-      <ul className="races-list">
-        {races.map((race, index) => (
-          <li key={`${race.round}-${index}`} className="race-item">
-            <Link to={`/race/${race.round}`} className="race-link">
-              <div className="race-info">
-                <p className="race-name">{race.raceName}</p>
-                <p className="race-date">
-                  {new Date(race.date).toLocaleDateString()}
-                </p>
-                <p className="race-location">
-                  {race.Circuit.Location.locality},{" "}
-                  {race.Circuit.Location.country}{" "}
-                  <Flag
-                    code={countryCode(race.Circuit.Location.country)}
-                    className="race-flag"
-                  />
-                </p>
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <button className="toggle-button" onClick={toggleSortOrder}>
+            {sortByLatest
+              ? "Show Races in Original Order"
+              : "Show Races by Latest"}
+          </button>
+          <ul className="races-list">
+            {sortedRaces.map((race, index) => (
+              <li key={`${race.round}-${index}`} className="race-item">
+                <Link to={`/race/${race.round}`} className="race-link">
+                  <div className="race-info">
+                    <p className="race-name">{race.raceName}</p>
+                    <p className="race-date">
+                      {new Date(race.date).toLocaleDateString()}
+                    </p>
+                    <p className="race-location">
+                      {race.Circuit.Location.locality},{" "}
+                      {race.Circuit.Location.country}{" "}
+                      <Flag
+                        code={countryCode(race.Circuit.Location.country)}
+                        className="race-flag"
+                      />
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   );
 }

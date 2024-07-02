@@ -40,7 +40,7 @@
 }
 
 .driver-card {
-  background: var(--background-buttons2);
+  background: var(--background-buttons);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -88,7 +88,7 @@
 }
 
 .info-card {
-  background: var(--background-buttons2);
+  background: var(--background-buttons);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;

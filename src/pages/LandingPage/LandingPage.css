@@ -22,8 +22,8 @@
   padding: 15px 30px;
   font-size: 1em;
   color: var(--button-text);
-  background: var(--button-background);
-  border: none;
+  border: 1px solid var(--button-background);
+  background: var(--background-color);
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;

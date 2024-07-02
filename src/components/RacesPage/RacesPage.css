@@ -13,7 +13,7 @@
 
 .races-list {
   list-style: none;
-  padding: 0;
+  padding-top: 10px;
 }
 
 .race-item {
@@ -23,6 +23,26 @@
   padding: 10px;
   background: var(--background-color);
   transition: all 0.3s ease;
+  list-style: none;
+}
+
+.toggle-button {
+  transition: all 0.3s ease;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--button-background);
+}
+
+.toggle-button:hover {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 50%;
+}
+
+.race-list {
+  padding-top: 10px;
 }
 
 .driver-name.fastest-lap {
