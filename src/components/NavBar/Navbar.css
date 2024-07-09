@@ -94,7 +94,7 @@
     position: absolute;
     top: 50px;
     left: 0;
-    gap: 70px;
+    gap: 20px;
     background: var(--background-color);
     display: flex;
     flex-direction: column;
