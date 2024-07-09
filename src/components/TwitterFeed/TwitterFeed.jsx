@@ -3,13 +3,11 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function TwitterFeed() {
   return (
-    <div>
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="f1"
-        options={{ height: "600px", width: "1000px" }}
+        options={{ height: "1000px", width: "1000px" }}
       />
-    </div>
   );
 }
 

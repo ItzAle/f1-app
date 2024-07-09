@@ -65,3 +65,12 @@ export const getAllQualifyingResults = async () => {
 
   return qualifyingResults;
 };
+
+export const getLastRaceResults = async () => {
+  const response = await axios.get(`${BASE_URL}/current/last/results.json`);
+  return response.data.MRData.RaceTable.Races[0].Results;
+};
+export const getRaceInfo = async () => {
+  const response = await axios.get(`${BASE_URL}/current/last/results.json`);
+  return response.data.MRData.RaceTable.Races[0];
+};

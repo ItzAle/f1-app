@@ -1,0 +1,135 @@
+/* LastRaceResults.css */
+
+.last-race-results {
+  margin: 20px 0;
+  color: #fff;
+}
+
+.last-race-results h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2em;
+}
+
+.top-three-container {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.top-three-item {
+  margin: 0 10px;
+  text-align: center;
+}
+
+.top-three-item img.driver-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.top-three-item .driver-info {
+  margin-top: 10px;
+}
+
+.top-three-item .driver-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.top-three-item .driver-team {
+  font-size: 1em;
+  color: #ccc;
+}
+
+.top-three-item .driver-time {
+  font-size: 0.9em;
+}
+
+.top-three-item .driver-points {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.position-1 {
+  order: 2;
+  transform: scale(1.2);
+}
+
+.position-1 img.driver-image {
+  border: 3px solid gold;
+}
+
+.position-2 {
+  order: 1;
+}
+
+.position-2 img.driver-image {
+  border: 3px solid silver;
+}
+
+.position-3 {
+  order: 3;
+}
+
+.position-3 img.driver-image {
+  border: 3px solid #cd7f32;
+}
+
+.results-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.result-item {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: var(--background-color);
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.result-item:nth-child(even) {
+  background-color: var(--background-color2);
+}
+
+.result-position,
+.result-driver,
+.result-constructor,
+.result-time,
+.result-points {
+  flex: 1;
+  text-align: center;
+}
+.team-logo-results {
+  height: 100%;
+  width: 40px;
+}
+.result-driver {
+  display: flex;
+  align-items: center;
+}
+
+.result-driver img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .top-three-item .driver-name,
+  .top-three-item .driver-team,
+  .driver-name-span {
+    display: none;
+  }
+}

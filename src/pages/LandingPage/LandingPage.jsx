@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../../assets/global.css";
 import RaceCountdown from "../../components/RaceCountDown/RaceCountDown";
-import TwitterFeed from "../../components/TwitterFeed/TwitterFeed";
 import "./LandingPage.css";
+import LastRaceResults from "../../components/LastRaceResults/LastRaceResults";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function LandingPage() {
   useEffect(() => {
@@ -27,22 +27,13 @@ function LandingPage() {
     <div>
       <div className="landing-container">
         <RaceCountdown />
-        <div className="buttons-container">
-          <Link to="/driverstandings" className="landing-button">
-            Driver Standings
-          </Link>
-          <Link to="/constructorstandings" className="landing-button">
-            Constructor Standings
-          </Link>
-          <Link to="/qualifying" className="landing-button">
-            Qualifyings
-          </Link>
-          <Link to="/race" className="landing-button">
-            Race Results
-          </Link>
-        </div>
+        <LastRaceResults />
         <div className="twitter-feed-container">
-          <TwitterFeed />
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="f1"
+            options={{ height: "600px", width: "1000px" }}
+          />
         </div>
       </div>
     </div>
