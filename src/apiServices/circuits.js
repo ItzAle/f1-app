@@ -3,6 +3,7 @@ import axios from "axios";
 // limpiar console.log
 export default async function handler(req, res) {
   try {
+    console.log("Fetching data from f1connectapi...");
     const response = await axios.get(
       "https://f1connectapi.vercel.app/api/2024/circuits"
     );
