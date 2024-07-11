@@ -7,7 +7,14 @@ export const getCircuits = async () => {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
-  const data = await response.json();
-  console.log("Data received from API:", data); // Agrega este console.log para depuración
-  return data;
+  const responseText = await response.text();
+  console.log("Raw response:", responseText);
+  try {
+    const data = JSON.parse(responseText);
+    console.log("Data received from API:", data);
+    return data;
+  } catch (e) {
+    console.error("Error parsing JSON:", e);
+    throw new Error("Failed to parse JSON response");
+  }
 };
