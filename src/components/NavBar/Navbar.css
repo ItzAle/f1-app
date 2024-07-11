@@ -88,6 +88,9 @@
   font-size: 40px;
   padding-left: 10px;
 }
+.switchMobile {
+  font-size: 50px;
+}
 @media (max-width: 1024px) {
   .nav_items {
     z-index: 400;

@@ -1,0 +1,48 @@
+.circuit-list-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.circuit-item:hover {
+  opacity: 60%;
+}
+
+.circuit-list-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: var(--text-color);
+}
+
+.circuit-list {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.circuit-item {
+  transition: all 0.3s ease;
+  border: 1px solid var(--button-background);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: var(--background-color);
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.race-flag {
+  height: 20px;
+}
+
+.race-flag img {
+  width: 120px;
+  height: 120px;
+}
+
+.circuit-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}

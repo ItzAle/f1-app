@@ -12,7 +12,18 @@ const countryCode = (country) => {
     USA: "US",
     Monaco : "MC",
     Canada: "CA",
-    Austria: "AT"
+    Austria: "AT",
+    Bahrein: "BH",
+    Brazil: "BR",
+    Belgium: "BE",
+    Hungary: "HU",
+    Mexico: "MX",
+    Qatar: "QA",
+    Azerbaijan: "AZ",
+    "Great Britain": "GB",
+    Singapore: "SG",
+    Netherlands: "NL",
+    "Abu Dhabi": "AE",
 
   };
   return countryCodes[country] || "";

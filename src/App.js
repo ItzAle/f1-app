@@ -18,6 +18,8 @@ import RaceResultsPage from "./components/RaceResultsPage/RaceResultsPage";
 import SprintResultsPage from "./components/SprintResultsPage/SprintResultPage";
 import QualifyingResultsPage from "./components/QualifyingResults/QualifyingResults";
 import QualifyingPage from "./components/QualifyingPage/QualifyingPage";
+import CircuitDetails from "./components/CircuitDetails/CircuitDetails";
+import CircuitList from "./components/CircuitList/CircuitList";
 function App() {
   return (
     <div>
@@ -38,6 +40,8 @@ function App() {
         <Route path="/sprint/:round" element={<SprintResultsPage />} />
         <Route path="/qualifying/:round" element={<QualifyingResultsPage />} />
         <Route path="/qualifying/" element={<QualifyingPage />} />
+        <Route path="circuits" element={<CircuitList />} />
+        <Route path="circuits/:id" element={<CircuitDetails />} />
       </Routes>
     </div>
   );

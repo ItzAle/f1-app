@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "./../../assets/images/f1logo.png";
 import ThemeSwitch from "../other/ThemeSwitch";
+import { CgDarkMode } from "react-icons/cg";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,15 +61,17 @@ function NavBar() {
           <Link to={"/race"}>
             <h1 className="ConstructorStandings">Races</h1>
           </Link>
+          <Link to={"/circuits"}>
+            <h1 className="ConstructorStandings">Circuits</h1>
+          </Link>
           <ThemeSwitch onChange={toggleTheme} checked={isDarkMode} />
         </div>
       </nav>
       <div className={`nav_items ${isOpen && "open"}`}>
-        <ThemeSwitch
+        <CgDarkMode
           className="switchMobile"
-          onChange={toggleTheme}
-          checked={isDarkMode}
-          onClick={handleClick}
+          onClickCapture={handleClick}
+          onClick={toggleTheme}
         />
         <Link to={"/"} onClick={handleClick}>
           <h1 className="home_mobile">Home</h1>
@@ -84,6 +87,9 @@ function NavBar() {
         </Link>
         <Link to={"/race"} onClick={handleClick}>
           <h1 className="cs_mobile">Race Results</h1>
+        </Link>
+        <Link to={"/circuits"} onClick={handleClick}>
+          <h1 className="cs_mobile">Circuits</h1>
         </Link>
       </div>
       <div className="mobileDiv">
