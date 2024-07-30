@@ -1,25 +1,47 @@
+import VER from "../../assets/images/nums/web/verstappen.webp";
+import NOR from "../../assets/images/nums/web/norris.webp";
+import LEC from "../../assets/images/nums/web/leclerc.webp";
+import SAI from "../../assets/images/nums/web/sainz.webp";
+import PER from "../../assets/images/nums/web/perez.webp";
+import PIA from "../../assets/images/nums/web/piastri.webp";
+import RUS from "../../assets/images/nums/web/russell.webp";
+import ALO from "../../assets/images/nums/web/alonso.webp";
+import TSU from "../../assets/images/nums/web/tsunoda.webp";
+import STR from "../../assets/images/nums/web/stroll.webp";
+import RIC from "../../assets/images/nums/web/ricciardo.webp";
+import BEA from "../../assets/images/nums/web/bearman.webp";
+import HUL from "../../assets/images/nums/web/hulkenberg.webp";
+import GAS from "../../assets/images/nums/web/gasly.webp";
+import OCO from "../../assets/images/nums/web/ocon.webp";
+import ALB from "../../assets/images/nums/web/albon.webp";
+import MAG from "../../assets/images/nums/web/magnussen.webp";
+import ZHO from "../../assets/images/nums/web/zhou.webp";
+import BOT from "../../assets/images/nums/web/bottas.webp";
+import HAM from "../../assets/images/nums/web/hamilton.webp";
+import SAR from "../../assets/images/nums/web/sargeant.webp";
+
 const permamentNumber = {
-  33: "https://i.ibb.co/7z4GCqV/VER.png",
-  14: "https://i.ibb.co/4VsxczT/ALO.png",
-  38: "https://i.ibb.co/St0cDYx/BEA.png",
-  77: "https://i.ibb.co/zNd9p0c/BOT.png",
-  10: "https://i.ibb.co/T2pTDLc/GAS.png",
-  44: "https://i.ibb.co/PWmKt3v/HAM.png",
-  27: "https://i.ibb.co/RvxLmSp/HUL.png",
-  16: "https://i.ibb.co/10g904Q/LEC.png",
-  20: "https://i.ibb.co/whbtD4B/MAG.png",
-  4: "https://i.ibb.co/fdW7fdP/NOR.png",
-  11: "https://i.ibb.co/z4zzYvS/PER.png",
-  81: "https://i.ibb.co/H4DJHSV/PIA.png",
-  3: "https://i.ibb.co/XkwhYFw/RIC.png",
-  63: "https://i.ibb.co/9WKJvcB/RUS.png",
-  55: "https://i.ibb.co/TKwqkkd/SAI.png",
-  2: "https://i.ibb.co/kqDF60C/SARG.png",
-  18: "https://i.ibb.co/pKCFmb7/STR.png",
-  22: "https://i.ibb.co/zfKsRDj/TSU.png",
-  24: "https://i.ibb.co/n8gRQ23/ZHO.png",
-  23: "https://i.ibb.co/gwRCjQB/ALB.png",
-  31: "https://i.ibb.co/MR6YLry/ESTOCO01.png",
+  33: VER,
+  14: ALO,
+  38: BEA,
+  77: BOT,
+  10: GAS,
+  44: HAM,
+  27: HUL,
+  16: LEC,
+  20: MAG,
+  4: NOR,
+  11: PER,
+  81: PIA,
+  3: RIC,
+  63: RUS,
+  55: SAI,
+  2: SAR,
+  18: STR,
+  22: TSU,
+  24: ZHO,
+  23: ALB,
+  31: OCO,
 };
 
 export default permamentNumber;

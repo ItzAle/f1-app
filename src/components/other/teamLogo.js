@@ -1,14 +1,25 @@
+import Mercedes from "../../assets/logos/web/Mercedes.webp";
+import RedBull from "../../assets/logos/web/Redbull.webp";
+import Ferrari from "../../assets/logos/web/Ferrari.webp";
+import Astonmartin from "../../assets/logos/web/AstonMartin.webp";
+import Alpine from "../../assets/logos/web/Alpine.webp";
+import RBF1 from "../../assets/logos/web/RBCA.webp";
+import Sauber from "../../assets/logos/web/Kick.webp";
+import McLaren from "../../assets/logos/web/Mclaren.webp";
+import Haas from "../../assets/logos/web/Haas.webp";
+import Williams from "../../assets/logos/web/Williams.webp";
+
 const teamLogo = {
-  Mercedes: "https://i.ibb.co/6Ng9CYg/Mercedes.png",
-  "Red Bull": "https://i.ibb.co/xSxMjL0/RedBull.png",
-  Ferrari: "https://i.ibb.co/vxqXDv1/Ferrari.png",
-  "Aston Martin": "https://i.ibb.co/JcYs0fx/Astonmartin.png",
-  "Alpine F1 Team": "https://i.ibb.co/zVtK673/Alpine.png",
-  "RB F1 Team": "https://i.ibb.co/R9RSjXY/RCBA.png",
-  Sauber: "https://i.ibb.co/m5XVJVG/sauber.png",
-  McLaren: "https://i.ibb.co/QCZdDCw/McLaren.png",
-  "Haas F1 Team": "https://i.ibb.co/JR9LGXQ/Haas.png",
-  Williams: "https://i.ibb.co/W2HWGmz/Williams.png",
+  Mercedes: Mercedes,
+  "Red Bull": RedBull,
+  Ferrari: Ferrari,
+  "Aston Martin": Astonmartin,
+  "Alpine F1 Team": Alpine,
+  "RB F1 Team": RBF1,
+  Sauber: Sauber,
+  McLaren: McLaren,
+  "Haas F1 Team": Haas,
+  Williams: Williams,
 };
 
 export default teamLogo;

@@ -5,15 +5,20 @@ const countryCode = (country) => {
     Italy: "IT",
     Spain: "ES",
     Bahrain: "BH",
-    "Saudi Arabia" : "SA",
-    Australia : "AU",
+    "Saudi Arabia": "SA",
+    Australia: "AU",
     Japan: "JP",
     China: "CN",
     USA: "US",
-    Monaco : "MC",
+    Monaco: "MC",
     Canada: "CA",
-    Austria: "AT"
-
+    Austria: "AT",
+    Hungary: "HU",
+    UK: "GB",
+    Belgium: "BE",
+    Netherlands: "NL",
+    Singapore: "SG",
+    Brazil: "BR",
   };
   return countryCodes[country] || "";
 };

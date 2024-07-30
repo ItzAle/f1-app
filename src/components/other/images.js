@@ -17,6 +17,7 @@ const nationalityToCountryCode = {
   American: "US",
   Austrian: "AT",
   Swiss: "CH",
+  Hungarian: "HU",
 };
 
 export default nationalityToCountryCode;

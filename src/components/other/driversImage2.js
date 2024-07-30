@@ -1,25 +1,47 @@
+import VER from "../../assets/images/drivers/web/v1/verstappen.webp";
+import NOR from "../../assets/images/drivers/web/v1/norris.webp";
+import LEC from "../../assets/images/drivers/web/v1/leclerc.webp";
+import SAI from "../../assets/images/drivers/web/v1/sainz.webp";
+import PER from "../../assets/images/drivers/web/v1/perez.webp";
+import PIA from "../../assets/images/drivers/web/v1/piastri.webp";
+import RUS from "../../assets/images/drivers/web/v1/russell.webp";
+import ALO from "../../assets/images/drivers/web/v1/alonso.webp";
+import TSU from "../../assets/images/drivers/web/v1/tsunoda.webp";
+import STR from "../../assets/images/drivers/web/v1/stroll.webp";
+import RIC from "../../assets/images/drivers/web/v1/ricciardo.webp";
+import BEA from "../../assets/images/drivers/web/v1/bearman.webp";
+import HUL from "../../assets/images/drivers/web/v1/hulkenberg.webp";
+import GAS from "../../assets/images/drivers/web/v1/gasly.webp";
+import OCO from "../../assets/images/drivers/web/v1/ocon.webp";
+import ALB from "../../assets/images/drivers/web/v1/albon.webp";
+import MAG from "../../assets/images/drivers/web/v1/magnussen.webp";
+import ZHO from "../../assets/images/drivers/web/v1/zhou.webp";
+import BOT from "../../assets/images/drivers/web/v1/bottas.webp";
+import HAM from "../../assets/images/drivers/web/v1/hamilton.webp";
+import SAR from "../../assets/images/drivers/web/v1/sargeant.webp";
+
 const driversImage2 = {
-  max_verstappen: "https://i.ibb.co/fFGWPWG/VERv2.png",
-  norris: "https://i.ibb.co/QFDL6LT/NORv2.png",
-  leclerc: "https://i.ibb.co/nCwmV45/LECv2.png",
-  sainz: "https://i.ibb.co/Tk6DGhL/SAIv2.png",
-  perez: "https://i.ibb.co/nz4bnz6/PERv2.png",
-  piastri: "https://i.ibb.co/n194c1K/PIAv2png.png",
-  russell: "https://i.ibb.co/B6yLh4C/RUSv2.png",
-  alonso: "https://i.ibb.co/MP5xtDs/ALOv2.png",
-  tsunoda: "https://i.ibb.co/4Tfgd10/TSUv2.png",
-  stroll: "https://i.ibb.co/CBgGkbn/STR.png",
-  ricciardo: "https://i.ibb.co/QkK2x4N/RICv2.png",
-  bearman: "https://i.ibb.co/nL7tjp9/BEA.png",
-  hulkenberg: "https://i.ibb.co/k1MKbG1/HULv2.png",
-  gasly: "https://i.ibb.co/hBcYF5W/GASv2.png",
-  ocon: "https://i.ibb.co/9Ws6ktN/OCOv2.png",
-  albon: "https://i.ibb.co/9bQfckw/ALBv2.png",
-  kevin_magnussen: "https://i.ibb.co/sF2C78j/MAGv2.png",
-  zhou: "https://i.ibb.co/pK97TBL/ZHOv2.png",
-  bottas: "https://i.ibb.co/5xD2HxH/BOTv2.png",
-  sargeant: "https://i.ibb.co/HVSsvS8/SARv2.png",
-  hamilton: "https://i.ibb.co/xmT0DWZ/HAMv2.png",
+  max_verstappen: VER,
+  norris: NOR,
+  leclerc: LEC,
+  sainz: SAI,
+  perez: PER,
+  piastri: PIA,
+  russell: RUS,
+  alonso: ALO,
+  tsunoda: TSU,
+  stroll: STR,
+  ricciardo: RIC,
+  bearman: BEA,
+  hulkenberg: HUL,
+  gasly: GAS,
+  ocon: OCO,
+  albon: ALB,
+  kevin_magnussen: MAG,
+  zhou: ZHO,
+  bottas: BOT,
+  sargeant: SAR,
+  hamilton: HAM,
 };
 
 export default driversImage2;
