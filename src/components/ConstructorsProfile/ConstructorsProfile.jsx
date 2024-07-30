@@ -94,12 +94,13 @@ function ConstructorsProfile() {
 
   return (
     <>
-      <div className="teamContainer">
+      {/* <div className="teamContainer">
         {teamCars[team.name] && (
           <img className="teamCar" src={teamCars[team.name]} alt={team.name} />
         )}
         <p className="teamName">{team.name}</p>
-      </div>
+      </div> */}
+      <h1 className="teamName">{team.name}</h1>
       <div className="otherDivDesktop">
         <div className="driversContainer">
           {drivers.map((driver) => (
