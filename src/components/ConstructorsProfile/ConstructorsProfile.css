@@ -127,19 +127,52 @@
   .infoTeam {
     cursor: default;
     padding: 0;
-    flex-direction: column;
+    justify-content: center;
   }
   .teamCar {
     max-width: 650px;
   }
   .otherDivDesktop {
-    padding-bottom: 10%;
+    padding-bottom: 50%;
     padding-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
-  .driversContainer {
-    margin: 0 70px 0 500px;
+  @media (min-width: 1400px) {
+    .teamContainer {
+      max-width: 95%;
+      padding: 40px;
+    }
+    .teamCar {
+      max-width: 1000px;
+    }
+    .teamName {
+      font-size: 48px;
+    }
+    .driversContainer {
+      gap: 60px;
+    }
+    .driver-card {
+      width: 400px;
+    }
+    .driver-card-title {
+      font-size: 32px;
+    }
+    .driver-card-text {
+      font-size: 24px;
+    }
+    .info-title {
+      font-size: 36px;
+    }
+    .info-value {
+      font-size: 50px;
+    }
+    .infoTeam {
+      gap: 165px;
+    }
+    .info-card {
+      width: 300px;
+    }
   }
 }

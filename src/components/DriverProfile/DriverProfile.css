@@ -51,8 +51,7 @@
 }
 
 .flag2,
-.helmet,
-.teamLogo {
+.helmet {
   transition: all 0.3s ease;
   width: 120px;
   height: 120px;
@@ -63,10 +62,24 @@
 }
 
 .flag2 img,
-.helmet img,
+.helmet img {
+  max-width: 100%;
+  max-height: 120px;
+}
+
 .teamLogo img {
   max-width: 100%;
   max-height: 120px;
+}
+
+.teamLogo {
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100px;
+  background: var(--background-buttons);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 
 .mainMainDriver {
@@ -206,14 +219,23 @@
     max-height: 150px;
   }
   .flag2,
-  .helmet,
-  .teamLogo {
+  .helmet {
     width: 150px;
     height: 150px;
   }
+
+  .teamlogo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .teamlogo img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
   .flag2 img,
-  .helmet img,
-  .teamLogo img {
+  .helmet img {
     max-width: 100%;
     max-height: 150px;
   }
@@ -227,8 +249,12 @@
 }
 @media (min-width: 360px) {
   .flag2,
-  .helmet,
-  .teamLogo {
+  .helmet {
+    width: 110px;
+    height: 110px;
+  }
+
+  .teamlogo {
     width: 110px;
     height: 110px;
   }
@@ -253,8 +279,11 @@
 
 @media (min-width: 344px) {
   .flag2,
-  .helmet,
-  .teamLogo {
+  .helmet {
+    width: 100px;
+    height: 100px;
+  }
+  .teamlogo {
     width: 100px;
     height: 100px;
   }
