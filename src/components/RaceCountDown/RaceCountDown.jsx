@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./RaceCountDown.css";
-import Loader from "../Loader/Loader";
 
 const RaceCountdown = () => {
   const [nextRace, setNextRace] = useState(null);
   const [timeRemaining, setTimeRemaining] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchNextRace = async () => {
@@ -20,8 +20,10 @@ const RaceCountdown = () => {
             new Date()
         );
         setNextRace(upcomingRace);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false);
       }
     };
 
@@ -57,19 +59,7 @@ const RaceCountdown = () => {
   }, [nextRace]);
 
   return (
-    <div className="countdown-container">
-      {nextRace ? (
-        <div className="countdown-content">
-          <h1 className="NR">Next Race: {nextRace.raceName}</h1>
-          <p className="raceC">
-            {nextRace.date} at {nextRace.time.replace(":00Z", "")}
-          </p>
-          <h2 className="h2RC">Time remaining: {timeRemaining}</h2>
-        </div>
-      ) : (
-        <Loader />
-      )}
-    </div>
+<></>
   );
 };
 

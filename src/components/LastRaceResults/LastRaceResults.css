@@ -133,3 +133,10 @@
     display: none;
   }
 }
+
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-family: var(--f1r);
+  color: var(--text-color);
+}

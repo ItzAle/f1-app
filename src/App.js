@@ -18,9 +18,32 @@ import RaceResultsPage from "./components/RaceResultsPage/RaceResultsPage";
 import SprintResultsPage from "./components/SprintResultsPage/SprintResultPage";
 import QualifyingResultsPage from "./components/QualifyingResults/QualifyingResults";
 import QualifyingPage from "./components/QualifyingPage/QualifyingPage";
+
+// Banner component for the 2024 season announcement
+const SeasonBanner = () => {
+  const bannerStyle = {
+    backgroundColor: 'var(--color1)',
+    color: 'white',
+    padding: '10px',
+    textAlign: 'center',
+    fontFamily: 'var(--f1b)',
+    position: 'sticky',
+    top: '0',
+    zIndex: '1000',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+  };
+
+  return (
+    <div style={bannerStyle}>
+      ATTENTION: This app is only for the 2024 F1 season. A new version is currently under development.
+    </div>
+  );
+};
+
 function App() {
   return (
     <div>
+      <SeasonBanner />
       <ToastContainer />
       <Routes>
         <Route path="/" element={<LandingPage />} />

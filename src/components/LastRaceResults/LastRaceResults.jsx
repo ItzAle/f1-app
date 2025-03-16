@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { getLastRaceResults, getRaceInfo } from "../../apiServices/racesApi";
-import Loader from "../Loader/Loader";
 import driverImages from "../../components/other/driversImage";
 import teamLogo from "../../components/other/teamLogo";
 import "./LastRaceResults.css"; // Importa el archivo CSS
@@ -33,6 +32,10 @@ function LastRaceResults() {
   }, []);
   if (error) {
     return <div className="error">Error: {error.message}</div>;
+  }
+
+  if (loading) {
+    return <div className="loading-message">Loading race results...</div>;
   }
 
   if (results.length === 0) {
